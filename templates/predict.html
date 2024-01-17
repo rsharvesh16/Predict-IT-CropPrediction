@@ -1,0 +1,251 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C500%2C700%2C800%2C900"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Calibri%3A700"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A400%2C500%2C800%2C900"/>
+        <link rel="icon" href="favicon-16x16.png" >
+        <link rel="shortcut icon" href="favicon-16x16.png" >
+  <style>
+            @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 30px;
+  color: #777;
+  background: #4CAF50;
+}
+
+.container {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea,
+#contact button[type="submit"] {
+  font: 400 12px/16px "Poppins", Helvetica, Arial, sans-serif;
+}
+
+#contact {
+  background: #F9F9F9;
+  padding: 25px;
+  margin: 150px 0;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+#contact h3 {
+  display: block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+#contact h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact input[type="tel"],
+#contact input[type="url"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+}
+
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact input[type="tel"]:hover,
+#contact input[type="url"]:hover,
+#contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #aaff55;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contact button[type="submit"]:hover {
+  background: #43A047;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.copyright {
+  text-align: center;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+:-moz-placeholder {
+  color: #888;
+}
+
+::-moz-placeholder {
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  color: #888;
+}
+.logo {
+  margin: 0.3rem 50.1rem 0rem 0rem;
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.5;
+  color: #000000;
+  font-family: Poppins;
+  white-space: nowrap;
+  display: flex;
+  align-items: baseline;
+  flex-shrink: 0;
+}
+.logo .predict {
+}
+.logo .it {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.5;
+  color: #aaff55;
+  font-family: Poppins;
+}
+
+#mainContainer {
+            /* display: flex; */
+        }
+
+        .container {
+            flex-grow: 1;
+            margin-left: 30px; 
+            border-radius: 20%;
+        }
+
+        #resultBox {
+            display: none;
+            flex-grow: 1;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #ffffff;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        }
+
+        #resultBox h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        #resultBox p {
+            font-size: 16px;
+            color: #333;
+        }
+  </style>
+    </head>
+<body>
+  <div class="container" id="mainContainer">  
+    <form id="contact" action="" method="post">
+      <h3> <p class="logo">
+        <span class="predict">Predict</span>
+        <span class="it">it</span>
+      </p>
+    </h3>
+
+      <fieldset>
+        <input placeholder="Nitrogen (N)" type="text" tabindex="1" required autofocus>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Phosphorus (P)" type="text" tabindex="2" required>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Pottasium (K)" type="text" tabindex="3" required>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Temperature" type="text" tabindex="4" required>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Humidity" type="text" tabindex="5" required>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Soil pH" type="text" tabindex="6" required>
+      </fieldset>
+      <fieldset>
+        <input placeholder="Rainfall" type="text" tabindex="7" required>
+      </fieldset>
+      <fieldset>
+        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Predict Price</button>
+      </fieldset>
+
+    </form>
+
+    <div class="container" id="resultBox">
+      <h3>Result</h3>
+            <p>Here is the prediction result...</p>
+    
+    </div>
+  </div>
+</body>
+<script>
+
+</script>
+  </html>
