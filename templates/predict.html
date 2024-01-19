@@ -204,48 +204,41 @@ fieldset {
     </head>
 <body>
   <div class="container" id="mainContainer">  
-    <form id="contact" action="" method="post">
+    <form id="contact" action="/Predict" method="post">
       <h3> <p class="logo">
         <span class="predict">Predict</span>
         <span class="it">it</span>
       </p>
     </h3>
-
-      <fieldset>
-        <input placeholder="Nitrogen (N)" type="text" tabindex="1" required autofocus>
-      </fieldset>
-      <fieldset>
-        <input placeholder="Phosphorus (P)" type="text" tabindex="2" required>
-      </fieldset>
-      <fieldset>
-        <input placeholder="Pottasium (K)" type="text" tabindex="3" required>
-      </fieldset>
-      <fieldset>
-        <input placeholder="Temperature" type="text" tabindex="4" required>
-      </fieldset>
-      <fieldset>
-        <input placeholder="Humidity" type="text" tabindex="5" required>
-      </fieldset>
-      <fieldset>
-        <input placeholder="Soil pH" type="text" tabindex="6" required>
-      </fieldset>
-      <fieldset>
-        <input placeholder="Rainfall" type="text" tabindex="7" required>
-      </fieldset>
-      <fieldset>
-        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Predict Price</button>
-      </fieldset>
-
+    <fieldset>
+      <input name="Nitrogen_value" placeholder="Nitrogen (N)" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input name="Phosphorus_value" placeholder="Phosphorus (P)" type="text" tabindex="2" required>
+    </fieldset>
+    <fieldset>
+      <input name="Potassium_value" placeholder="Pottasium (K)" type="text" tabindex="3" required>
+    </fieldset>
+    <fieldset>
+      <input name="Temperature_value" placeholder="Temperature" type="text" tabindex="4" required>
+    </fieldset>
+    <fieldset>
+      <input name="Humidity_value" placeholder="Humidity" type="text" tabindex="5" required>
+    </fieldset>
+    <fieldset>
+      <input name="Ph_value" placeholder="Soil pH" type="text" tabindex="6" required>
+    </fieldset>
+    <fieldset>
+      <input name="Rainfall_value" placeholder="Rainfall" type="text" tabindex="7" required>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Predict Price</button>
+    </fieldset>
     </form>
-
     <div class="container" id="resultBox">
       <h3>Result</h3>
-            <p>Here is the prediction result...</p>
-    
+            <p>Here is the prediction result {{ prediction }}</p>
     </div>
   </div>
 </body>
-<script>
-
-</script>
-  </html>
+</html>

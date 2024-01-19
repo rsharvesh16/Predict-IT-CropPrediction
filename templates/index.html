@@ -567,23 +567,18 @@ body {
   </div>
 </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script>
   function Predict() {
-    window.location.href = 'templates/predict.html';
+    // Make an AJAX request to the Flask server
+    $.ajax({
+      type: "GET",
+      url: "/predict_button_clicked",
+      success: function(response) {
+        // Redirect to the predict.html page
+        window.location.href = 'predict.html';
+      }
+    });
   }
-
-  let prevScrollPos = window.pageYOffset;
-
-window.onscroll = function() {
-    let currentScrollPos = window.pageYOffset;
-
-    if (prevScrollPos > currentScrollPos) {
-        document.querySelector('.header-yyW').style.top = '0';
-    } else {
-        document.querySelector('.header-yyW').style.top = '-60px'; /* Adjust this value based on your header height */
-    }
-
-    prevScrollPos = currentScrollPos;
-};
-  </script>
+</script>
   </html>
