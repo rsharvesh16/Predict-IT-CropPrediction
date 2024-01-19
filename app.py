@@ -30,7 +30,7 @@ def Predict():
 
 
         # Make a prediction using the loaded model
-        loaded_model = load_model('model.pkl')
+        loaded_model = load_model('model1-randomforest.pkl')
         prediction = loaded_model.predict(single_pred)
 
         # Display the predicted crop on the result page
