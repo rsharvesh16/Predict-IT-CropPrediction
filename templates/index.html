@@ -485,7 +485,10 @@ body {
       
       </span>
     </p>
-    <button onclick="Predict()" class="predict-but-Y5a"> Predict Now</button>
+    <a style="text-decoration: none; cursor: pointer;" href="{{ url_for('predict') }}">
+
+    <button class="predict-but-Y5a"> Predict Now</button>
+  </a>
     <p class="content-index-aHA">
     Are you ready to revolutionize your farming experience? 
     <br/>
@@ -497,14 +500,16 @@ body {
   <div class="component-4-TVN">
     <div class="header-yyW">
     </div>
-    <img class="apple-touch-icon-iw6" src="favicon-32x32.png"/>
+    <img class="apple-touch-icon-iw6" src="./assets/favicon-16x16.png"/>
     <p class="predictit-fLY">
       <span class="predictit-fLY-sub-0">Predict</span>
       <span class="predictit-fLY-sub-1">it</span>
     </p>
     <p class="home-pck">Home</p>
     <p class="about-us-7rk">About us</p>
-    <button onclick="Predict()" class="component-1-frame-1-jdE">Predict</button>
+    <a style="text-decoration: none;" href="{{ url_for('predict') }}"
+    <button class="component-1-frame-1-jdE">Predict</button>
+  </a>
   </div>
   <div class="component-2-o7J">
     <p class="why-choose-our-crop-yield-prediction-platform--hCg">Why Choose Our Crop Yield Prediction Platform ?</p>
@@ -568,17 +573,5 @@ body {
 </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script>
-  function Predict() {
-    // Make an AJAX request to the Flask server
-    $.ajax({
-      type: "GET",
-      url: "/predict_button_clicked",
-      success: function(response) {
-        // Redirect to the predict.html page
-        window.location.href = 'predict.html';
-      }
-    });
-  }
-</script>
+
   </html>

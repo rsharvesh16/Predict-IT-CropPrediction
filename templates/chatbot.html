@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PredictIT ChatBOT</title>
+</head>
+<body>
+    <h1>PredictIT ChatBOT</h1>
+    <form method="post" enctype="multipart/form-data">
+        <label for="input_text">Input Text:</label>
+        <input type="text" id="input_text" name="input_text" required>
+        <br>
+        <label for="uploaded_file">Upload Image:</label>
+        <input type="file" id="uploaded_file" name="uploaded_file" accept=".jpg, .jpeg, .png" required>
+        <br>
+        <input type="submit" value="Generate Response">
+    </form>
+
+    {% if input_text %}
+    <h2>Input Text:</h2>
+    <p>{{ input_text }}</p>
+    {% endif %}
+
+    {% if response %}
+    <h2>Response:</h2>
+    <p>{{ response }}</p>
+    {% endif %}
+
+</body>
+</html>

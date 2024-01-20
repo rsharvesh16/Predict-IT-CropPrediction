@@ -197,7 +197,7 @@ fieldset {
         }
 
         #resultBox p {
-            font-size: 16px;
+            font-size: 46px;
             color: #333;
         }
   </style>
@@ -235,10 +235,10 @@ fieldset {
       <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Predict Price</button>
     </fieldset>
     </form>
-    <div class="container" id="resultBox">
+    <div class="container" >
       <h3>Result</h3>
       {% if prediction %}
-          <p>Here is the prediction result {{ prediction }}</p>
+          <p style="color: #000000; font-weight: 400; font-size: larger;">Here is the prediction result {{ prediction }}</p>
       {% endif %}
     </div>
   </div>
