@@ -237,7 +237,9 @@ fieldset {
     </form>
     <div class="container" id="resultBox">
       <h3>Result</h3>
+      {% if prediction %}
           <p>Here is the prediction result {{ prediction }}</p>
+      {% endif %}
     </div>
   </div>
 </body>

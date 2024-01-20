@@ -31,10 +31,10 @@ def Predict():
         # Make a prediction using the loaded model
         loaded_model = load_model('model1-randomforest.pkl')
         prediction = loaded_model.predict(single_pred)
-        print(prediction)
+       
         # Display the predicted crop on the result page
-        return render_template('predict.html', prediction=prediction[0])
-    return render_template('predict.html')  # This line ensures predict.html is rendered when method is GET
+        return render_template('predict.html', prediction = prediction[0])
+    # return render_template('predict.html')  # This line ensures predict.html is rendered when method is GET
 
 # Redirect to the predict.html page when the predict button is clicked
 @app.route('/predict_button_clicked')
