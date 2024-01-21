@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C500%2C700%2C800%2C900" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Calibri%3A700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A400%2C500%2C800%2C900" />
+    <link rel="icon" href="favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon-16x16.png">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            font-weight: 100;
+            font-size: 12px;
+            line-height: 30px;
+            color: #000000;
+            background: #d3d3d3;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 400px;
+            background: #F9F9F9;
+            padding: 25px;
+            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+            border-radius: 10px;
+        }
+
+        #contact h3 {
+            font-size: 30px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #chat-container {
+            border: 2px solid #aaff55;
+            padding: 10px;
+            margin-bottom: 20px;
+            min-height: 200px;
+        }
+
+        #upload-container {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 10px;
+            
+            position: absolute;
+            left: 55%;
+        }
+
+        #upload-label {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        #input_text {
+            width: 100px;
+            border: 1px solid #000000;
+            background: #FFF;
+            margin-bottom: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+
+        #contact button[type="submit"] {
+            cursor: pointer;
+            width: 100%;
+            border: none;
+            background: #aaff55;
+            color: #FFF;
+            padding: 10px;
+            font-size: 15px;
+            border-radius: 5px;
+        }
+
+        #contact button[type="submit"]:hover {
+            background: #43A047;
+        }
+
+        #contact input:focus,
+        #contact textarea:focus {
+            outline: 0;
+            border: 1px solid #000000;
+        }
+
+        ::-webkit-input-placeholder {
+            color: #2e2e2e;
+        }
+
+        .logo {
+            margin-bottom: 1rem;
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.5;
+            color: #000000;
+            font-family: Poppins;
+            text-align: center;
+        }
+
+        .logo .predict {
+        }
+
+        .logo .it {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.5;
+            color: #aaff55;
+            font-family: Poppins;
+        }
+        #upload-input {
+    display: none; /* Hide the default file input */
+}
+
+#upload-label {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+#upload-input + #upload-label {
+    margin-right: 10px; /* Add some spacing between the file input and the label */
+}
+
+#upload-input:focus + #upload-label {
+    outline: 1px solid #000000;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="container" id="mainContainer">
+        <form id="contact" action="/chat" method="post" enctype="multipart/form-data">
+            <h3>
+                <p class="logo">
+                    <span class="predict">Chat</span>
+                    <span class="it">box</span>
+                </p>
+            </h3>
+            <div id="chat-container">
+                {% if input_text %}
+                <b><p style="color: #000000;">You : {{ input_text }}</p></b>
+                {% endif%}
+                <br>
+                {% if response %}
+                <b><p style="color: #000000;">PredictIT : {{ response }}</p></b>
+                {% endif%}
+            </div>
+            <!-- <div id="upload-container">
+                <label for="upload-input" id="upload-label">Choose Image</label>
+                <input type="file" id="upload-input" name="upload-input" accept="image/*">
+            </div> -->
+            <input placeholder="Ask your questions..." name="input_text" id="input_text" type="text" tabindex="7" required style="width: 300px;">
+
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Send</button>
+        </form>
+    </div>
+</body>
+
+</html>

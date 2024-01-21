@@ -204,7 +204,7 @@ fieldset {
     </head>
 <body>
   <div class="container" id="mainContainer">  
-    <form id="contact" action="/Predict" method="post">
+    <form id="contact" action="/predict" method="post">
       <h3> <p class="logo">
         <span class="predict">Predict</span>
         <span class="it">it</span>
@@ -236,11 +236,14 @@ fieldset {
     </fieldset>
     </form>
     <div class="container" >
-      <h3>Result</h3>
-      {% if prediction %}
-          <p style="color: #000000; font-weight: 400; font-size: larger;">Here is the prediction result {{ prediction }}</p>
-      {% endif %}
+
     </div>
   </div>
+  <center>
+    <h1>Result</h1>
+    {% if prediction %}
+        <h2><p style="color: #ffffff; font-weight: 400; font-size: larger;">Here is the prediction result {{ prediction }}</p></h2>
+    {% endif %}
+  </center>
 </body>
 </html>

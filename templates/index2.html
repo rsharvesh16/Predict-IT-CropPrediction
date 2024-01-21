@@ -12,9 +12,11 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Calibri%3A700"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C500%2C600%2C700%2C800%2C900"/>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A400%2C500%2C600%2C800%2C900"/>
-  <link rel="stylesheet" href="D:\Projects\PredictIT-Crop-yield-prediction\templates\styles\index.css"/>
-  <style>
-    
+  <link rel="stylesheet" href="./templates/styles/index2.css"/>
+</head>
+<body>
+<style>
+  
 html {
 	font-size:62.5%;
 }
@@ -95,7 +97,7 @@ body {
   width: 23.3rem;
   height: 5.4rem;
   position: absolute;
-  left: 67.1rem;
+  left: 52.1rem;
   top: 42.2rem;
   font-size: 2.6rem;
   font-weight: 800;
@@ -107,6 +109,25 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #7bf600;
+  border-radius: 5rem;
+}
+
+.index-kw6 .component-3-z4k .predict-but-Y5b {
+  width: 23.3rem;
+  height: 5.4rem;
+  position: absolute;
+  left: 78.1rem;
+  top: 42.2rem;
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1.5;
+  color: #7bf600;
+  font-family: Poppins, 'Source Sans Pro';
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
   border-radius: 5rem;
 }
 .index-kw6 .component-3-z4k .content-index-aHA {
@@ -463,10 +484,7 @@ body {
   font-family: Poppins, 'Source Sans Pro';
 }
 
-  </style>
-
-</head>
-<body>
+</style>
 <div class="index-kw6">
   <div class="component-3-z4k">
     <div class="homenav-kLk">
@@ -485,10 +503,13 @@ body {
       
       </span>
     </p>
-    <a style="text-decoration: none;" href="{{ url_for('predict') }}"
-
-    <button class="predict-but-Y5a"> Predict Now</button>
+    <a style="text-decoration: none; cursor: pointer;" href="{{ url_for('chat') }}">
+      <button class="predict-but-Y5b">Chatbot</button>
   </a>
+    <!-- <button class="component-1-frame-1-jdE">Predict</button> -->
+    <a style="text-decoration: none; cursor: pointer;" href="{{ url_for('predict') }}">
+      <button class="predict-but-Y5a">Predict Now</button>
+    </a>
     <p class="content-index-aHA">
     Are you ready to revolutionize your farming experience? 
     <br/>
@@ -498,21 +519,20 @@ body {
     <img class="man-Q1J" src="./assets/man.png"/>
   </div>
   <div class="component-4-TVN">
-    <div class="header-yyW">
-    </div>
-    <img class="apple-touch-icon-iw6" src="./assets/favicon-16x16.png"/>
+  <div class="header-yyW">
+    <img class="apple-touch-icon-iw6" src="./assets/favicon-32x32.png"/>
     <p class="predictit-fLY">
       <span class="predictit-fLY-sub-0">Predict</span>
       <span class="predictit-fLY-sub-1">it</span>
     </p>
-    <p class="home-pck">Home</p>
-    <p class="about-us-7rk">About us</p>
+    <button class="home-pck">Home</button>
+    <button id="about-us-7rk" class="about-us-7rk">About us</button> 
     <a style="text-decoration: none;" href="{{ url_for('predict') }}"
     <button class="component-1-frame-1-jdE">Predict</button>
-  </a>
+    </a>
   </div>
   <div class="component-2-o7J">
-    <p class="why-choose-our-crop-yield-prediction-platform--hCg">Why Choose Our Crop Yield Prediction Platform ?</p>
+    <p id="targetElement" class="why-choose-our-crop-yield-prediction-platform--hCg">Why Choose Our Crop Yield Prediction Platform ?</p>
     <div class="adt-us-bJ4">
       <div class="auto-group-bgfv-jfA">
         <div class="auto-group-jnu4-RXz">
@@ -572,6 +592,24 @@ body {
   </div>
 </div>
 </body>
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+  function Predict() {
+    window.location.href = 'predict.html';
+  }
+  let prevScrollPos = window.pageYOffset;
 
+    // Get the button element
+    var scrollButton = document.getElementById('about-us-7rk');
+
+    // Get the target element
+    var targetElement = document.getElementById('targetElement');
+
+    // Add a click event listener to the button
+    scrollButton.addEventListener('click', function() {
+      // Scroll to the top of the target element
+      targetElement.scrollIntoView({
+        behavior: 'smooth' // You can change this to 'auto' for instant scrolling
+      });
+    });
+  </script>
   </html>

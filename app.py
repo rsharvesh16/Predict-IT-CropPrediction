@@ -18,7 +18,7 @@ def load_model(modelfile):
 # Define the home route
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('index2.html')
 
 # Define the prediction route
 @app.route('/predict', methods=['POST', 'GET'])
@@ -37,7 +37,7 @@ def predict():
         # Make a prediction using the loaded model
         loaded_model = load_model('model1-randomforest.pkl')
         prediction = loaded_model.predict(single_pred)
-       
+        print(prediction)
         # Display the predicted crop on the result page
         return render_template('predict.html', prediction = prediction[0])
     return render_template('predict.html')  # This line ensures predict.html is rendered when method is GET
@@ -45,25 +45,24 @@ def predict():
 # Redirect to the predict.html page when the predict button is clicked
 
 
-@app.route('/chatbot', methods = ['GET', 'POST'])
-def ai_chatbot():
-    os.getenv("GOOGLE_API_KEY")
-    genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
-
-    if request.method=='POST':
+@app.route('/chat', methods=['POST', 'GET'])
+def chat():
+    if request.method == 'POST':
         input_text = request.form['input_text']
-        print(input_text)
-        uploaded_file = request.files['uploaded_file']
 
-        model = genai.GenerativeModel('gemini-pro-vision')
-        image_parts = [{"mime_type": uploaded_file.mimetype, "data": uploaded_file.read()}]
-        print(image_parts)
-        response = model.generate_content([input_text, image_parts[0], ""])
-        print(response)
+        input_prompt = """You have to answer to the question in three or four lines."""
 
-        return render_template('chatbot.html', input_text = input_text, response=response.text)
-    return render_template('chatbot.html')
+        response = generate_response(input_text, input_prompt)
 
+        return render_template('chat.html', input_text=input_text, response=response)
+
+    return render_template('chat.html')
+
+
+def generate_response(input_text, prompt):
+    model = genai.GenerativeModel("gemini-pro")
+    response = model.generate_content([input_text, "", prompt])
+    return response.text
 
 if __name__ == '__main__':
     app.run(debug=True)
