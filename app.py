@@ -50,7 +50,9 @@ def chat():
     if request.method == 'POST':
         input_text = request.form['input_text']
 
-        input_prompt = """You have to answer to the question in three or four lines."""
+        input_prompt = """If the question is related to soil or crop or nitrogen, postassium, phosphorous,
+        rainfall, soil ph, or humidity or temperature, answer related to that
+        else dont answer. You have to answer to the question in three or four lines and you have to answer only in english."""
 
         response = generate_response(input_text, input_prompt)
 
