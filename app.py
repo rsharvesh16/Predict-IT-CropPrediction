@@ -18,7 +18,7 @@ def load_model(modelfile):
 # Define the home route
 @app.route('/')
 def home():
-    return render_template('index2.html')
+    return render_template('index.html')
 
 # Define the prediction route
 @app.route('/predict', methods=['POST', 'GET'])

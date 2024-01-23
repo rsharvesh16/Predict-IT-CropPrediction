@@ -34,8 +34,8 @@
         }
 
         .container {
-            width: 80%;
-            max-width: 400px;
+            width: 100%;
+            max-width: 450px;
             background: #F9F9F9;
             padding: 25px;
             box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
@@ -53,40 +53,26 @@
             border: 2px solid #aaff55;
             padding: 10px;
             margin-bottom: 20px;
-            min-height: 200px;
+            max-width: 400px;
+            max-height: 200px;
+            overflow-y: auto; 
+            border: 1px solid #ccc;
         }
 
-        #upload-container {
-            display: flex;
-            justify-content: flex-end;
-            margin-bottom: 10px;
-            
-            position: absolute;
-            left: 55%;
-        }
-
-        #upload-label {
-            background-color: #4CAF50;
-            color: white;
-            padding: 8px 10px;
-            cursor: pointer;
-            border-radius: 5px;
-            margin-right: 10px;
-        }
 
         #input_text {
-            width: 100px;
+            width: 0%;
             border: 1px solid #000000;
             background: #FFF;
             margin-bottom: 10px;
-            padding: 10px;
-            box-sizing: border-box;
+            padding: 10px 10px;
             border-radius: 5px;
+            max-width: px;
         }
 
         #contact button[type="submit"] {
             cursor: pointer;
-            width: 100%;
+            width: 24%;
             border: none;
             background: #aaff55;
             color: #FFF;
@@ -96,7 +82,7 @@
         }
 
         #contact button[type="submit"]:hover {
-            background: #43A047;
+            background: #777777;
         }
 
         #contact input:focus,
@@ -106,7 +92,7 @@
         }
 
         ::-webkit-input-placeholder {
-            color: #2e2e2e;
+            color: #000000;
         }
 
         .logo {
@@ -129,26 +115,12 @@
             color: #aaff55;
             font-family: Poppins;
         }
-        #upload-input {
-    display: none; /* Hide the default file input */
-}
 
-#upload-label {
-    background-color: #4CAF50;
-    color: white;
-    padding: 8px 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    display: inline-block;
-}
-
-#upload-input + #upload-label {
-    margin-right: 10px; /* Add some spacing between the file input and the label */
-}
-
-#upload-input:focus + #upload-label {
-    outline: 1px solid #000000;
-}
+#home{
+          color: #43A047;
+          position: relative;
+          left: -140;
+          }
 
     </style>
 </head>
@@ -157,27 +129,33 @@
     <div class="container" id="mainContainer">
         <form id="contact" action="/chat" method="post" enctype="multipart/form-data">
             <h3>
+
                 <p class="logo">
-                    <span class="predict">Chat</span>
+                    <a href="{{ url_for('home') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" id="home" width="40" height="40" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                          <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
+                        </svg>
+                      </a>
+                    <span class="predict" style="font-family: poppins;">Chat</span>
                     <span class="it">box</span>
                 </p>
             </h3>
             <div id="chat-container">
                 {% if input_text %}
-                <b><p style="color: #000000;">You : {{ input_text }}</p></b>
+                <b><p style="color: #000000; font-size: medium;">You : {{ input_text }}</p></b>
                 {% endif%}
                 <br>
                 {% if response %}
-                <b><p style="color: #000000;">PredictIT : {{ response }}</p></b>
+                <b><p style="color: #000000; font-size: medium;">PredictIT : {{ response }}</p></b>
                 {% endif%}
             </div>
-            <!-- <div id="upload-container">
-                <label for="upload-input" id="upload-label">Choose Image</label>
-                <input type="file" id="upload-input" name="upload-input" accept="image/*">
-            </div> -->
+
             <input placeholder="Ask your questions..." name="input_text" id="input_text" type="text" tabindex="7" required style="width: 300px;">
 
             <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Send</button>
+            <center>
+            <a style="font-size: medium; color: #00a108;" href="{{ url_for('predict') }}">Predict Now</a>
+            </center>
         </form>
     </div>
 </body>

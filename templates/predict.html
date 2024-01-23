@@ -33,7 +33,7 @@ body {
   max-width: 400px;
   width: 100%;
   margin: 0 auto;
-  position: relative;
+
 }
 
 #contact input[type="text"],
@@ -151,16 +151,16 @@ fieldset {
   color: #888;
 }
 .logo {
-  margin: 0.3rem 50.1rem 0rem 0rem;
+  margin: 0.rem 50.1rem 0rem 0rem;
   font-size: 3.2rem;
   font-weight: 800;
-  line-height: 1.5;
+  line-height: 1.8;
   color: #000000;
   font-family: Poppins;
   white-space: nowrap;
-  display: flex;
   align-items: baseline;
   flex-shrink: 0;
+  text-align: center;
 }
 .logo .predict {
 }
@@ -174,12 +174,6 @@ fieldset {
 
 #mainContainer {
             /* display: flex; */
-        }
-
-        .container {
-            flex-grow: 1;
-            margin-left: 30px; 
-            border-radius: 20%;
         }
 
         #resultBox {
@@ -200,12 +194,29 @@ fieldset {
             font-size: 46px;
             color: #333;
         }
+
+        #home{
+          color: #43A047;
+
+          }
   </style>
     </head>
 <body>
+
+  
+  <center>
   <div class="container" id="mainContainer">  
+    
     <form id="contact" action="/predict" method="post">
-      <h3> <p class="logo">
+
+      <h3> 
+
+      <p class="logo">
+        <a href="{{ url_for('home') }}">
+          <svg xmlns="http://www.w3.org/2000/svg" id="home" width="40" height="40" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
+            <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
+          </svg>
+        </a>
         <span class="predict">Predict</span>
         <span class="it">it</span>
       </p>
@@ -234,16 +245,18 @@ fieldset {
     <fieldset>
       <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Predict Price</button>
     </fieldset>
-    </form>
-    <div class="container" >
 
-    </div>
+    <center>
+      <a style="font-size: medium; color: #00a108;" href="{{ url_for('chat') }}">Any doubts? ask AI</a>
+      </center>
+
+      {% if prediction %}
+          <b><h2><p style="color: #000000; font-weight: 400; font-size: larger;">Here is the prediction result <b>{{ prediction }}</b></p></h2></b>
+      {% endif %}
+    </center>
+    </form>
+
   </div>
-  <center>
-    <h1>Result</h1>
-    {% if prediction %}
-        <h2><p style="color: #ffffff; font-weight: 400; font-size: larger;">Here is the prediction result {{ prediction }}</p></h2>
-    {% endif %}
-  </center>
+
 </body>
 </html>
