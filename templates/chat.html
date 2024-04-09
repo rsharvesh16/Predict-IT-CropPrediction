@@ -1,163 +1,385 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C500%2C700%2C800%2C900" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Calibri%3A700" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A400%2C500%2C800%2C900" />
-    <link rel="icon" href="favicon-16x16.png">
-    <link rel="shortcut icon" href="favicon-16x16.png">
-    <style>
-        @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+    <link rel="stylesheet"  href="{{ url_for('static', filename='css/styles.css')}}" />
+    <link rel="stylesheet" href="./chatbot.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Calibri:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400&display=swap"
+    />
+  </head>
+  <style>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Roboto", Helvetica, Arial, sans-serif;
-        }
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --font-poppins: Poppins;
+    --paragraph-regular-16: Roboto;
+    --font-calibri: Calibri;
+    --font-mulish: Mulish;
+  
+    /* font sizes */
+    --paragraph-regular-16-size: 16px;
+    --font-size-13xl: 32px;
+    --font-size-4xl: 23px;
+    --font-size-lg: 18px;
+    --font-size-21xl: 40px;
+    --font-size-5xl: 24px;
+    --font-size-xl: 20px;
+  
+    /* Colors */
+    --color-lightsteelblue: #adbce5;
+    --color-steelblue-100: #7a8ab3;
+    --color-steelblue-200: #436e8e;
+    --color-black: #000;
+    --color-white: #fff;
+    --color-lightslategray: #6994b5;
+    --color-gray-100: rgba(255, 255, 255, 0.18);
+    --color-gray-200: rgba(255, 255, 255, 0.16);
+  
+    /* Gaps */
+    --gap-base: 16px;
+    --gap-xl: 20px;
+    --gap-5xs: 8px;
+  
+    /* Paddings */
+    --padding-16xl: 35px;
+    --padding-xl: 20px;
+    --padding-sm: 14px;
+    --padding-8xs: 5px;
+    --padding-11xs: 2px;
+    --padding-5xs: 8px;
+    --padding-5xs-5: 7.5px;
+    --padding-21xl: 40px;
+    --padding-7xs: 6px;
+    --padding-451xl: 470px;
+    --padding-7xl: 26px;
+    --padding-216xl: 235px;
+    --padding-2xs-5: 10.5px;
+  
+    /* Border radiuses */
+    --br-31xl: 50px;
+    --br-6xl: 25px;
+    --br-3xs: 10px;
+    --br-8xs: 5px;
+    --br-xl: 20px;
+    --br-mini: 15px;
+  }
+    .chat-container {
+  width: 500px;
+  height: 512px;
+  position: relative;
+  border-radius: var(--br-xl);
+  background-color: var(--color-gray-200);
+  display: none;
+  max-width: 100%;
+}
+.chatbot2 {
+  margin: 0;
+  height: 45px;
+  width: 170px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.chatbot-container {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+.div,
+.input {
+  position: relative;
+  background-color: var(--color-white);
+}
+.div {
+  border: 0;
+  height: 330px;
+  width: auto;
+  outline: 0;
+  align-self: stretch;
+  border-radius: var(--br-mini);
+  overflow-y: auto;
+}
+.input {
+  height: 50px;
+  width: 336px;
+  border-radius: var(--br-8xs);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: none;
+  max-width: 100%;
+}
+.ask-your-doubts {
+  width: 203px;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 2;
+}
+.input-parent {
+  flex: 1;
+  border-radius: var(--br-8xs);
+  border: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 13px 80px var(--padding-sm);
+  box-sizing: border-box;
+  min-width: 203px;
+  white-space: nowrap;
+  max-width: 100%;
+  z-index: 1;
+}
+.send {
+  position: relative;
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  font-family: var(--paragraph-regular-16);
+  color: var(--color-white);
+  text-align: center;
+  display: inline-block;
+  align-content: center;
+  min-width: 100px;
+}
+.but4,
+.chatbox,
+.frame-parent3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
 
-        body {
-            font-weight: 100;
-            font-size: 12px;
-            line-height: 30px;
-            color: #000000;
-            background: #d3d3d3;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+.but4 {
+  cursor: pointer;
+  border: 0;
+  padding: 10.5px 120px;
+  background-color: var(--color-lightsteelblue);
+  border-radius: var(--br-8xs);
+  flex-direction: row;
+  z-index: 1;
+  margin-top: 20px;
+}
+.but4:hover {
+  background-color: var(--color-steelblue-100);
+}
+.chatbox,
+.frame-parent3 {
+  align-self: stretch;
+  max-width: 100%;
+}
+.frame-parent3 {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--gap-base);
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: #a2a2a2;
+  font-family: var(--paragraph-regular-16);
+}
+.chatbox {
+  border-radius: var(--br-xl);
+  background-color: var(--color-gray-200);
+  flex-direction: column;
+  padding: 10px var(--padding-7xl) 31.2px;
+  box-sizing: border-box;
+  gap: 22.9px;
+  z-index: 1;
+}
+.bg-1-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+  height: 1038px;
+  object-fit: cover;
+}
+.add-image-1-icon{
+position: absolute;
+  top: 631px;
+  left: 890px;
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  z-index: 3;
+}
+.arrow-small-left-1-icon {
+  position: absolute;
+  top: 630px;
+  left: 793px;
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  z-index: 3;
+}
+.arrow-small-left-1-icon {
+  top: 212px;
+  left: 496px;
+  width: 33px;
+  height: 30px;
+}
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.chatbot1 {
+  width: 100%;
+  position: relative;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-white);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 187px var(--padding-451xl) 325px;
+  box-sizing: border-box;
+  letter-spacing: normal;
+  text-align: center;
+  font-size: var(--font-size-21xl);
+  color: var(--color-white);
+  font-family: var(--font-poppins);
+}
+@media screen and (max-width: 750px) {
+  .chatbox {
+    padding-top: var(--padding-xl);
+    padding-bottom: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .chatbot2 {
+    font-size: var(--font-size-5xl);
+  }
+  .send {
+    font-size: var(--paragraph-regular-16-size);
+  }
+  .chatbot1 {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}  
 
-        .container {
-            width: 100%;
-            max-width: 450px;
-            background: #F9F9F9;
-            padding: 25px;
-            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-            border-radius: 10px;
-        }
-
-        #contact h3 {
-            font-size: 30px;
-            font-weight: 300;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        #chat-container {
-            border: 2px solid #aaff55;
-            padding: 10px;
-            margin-bottom: 20px;
-            max-width: 400px;
-            max-height: 200px;
-            overflow-y: auto; 
-            border: 1px solid #ccc;
-        }
-
-
-        #input_text {
-            width: 0%;
-            border: 1px solid #000000;
-            background: #FFF;
-            margin-bottom: 10px;
-            padding: 10px 10px;
-            border-radius: 5px;
-            max-width: px;
-        }
-
-        #contact button[type="submit"] {
-            cursor: pointer;
-            width: 24%;
-            border: none;
-            background: #aaff55;
-            color: #FFF;
-            padding: 10px;
-            font-size: 15px;
-            border-radius: 5px;
-        }
-
-        #contact button[type="submit"]:hover {
-            background: #777777;
-        }
-
-        #contact input:focus,
-        #contact textarea:focus {
-            outline: 0;
-            border: 1px solid #000000;
-        }
-
-        ::-webkit-input-placeholder {
-            color: #000000;
-        }
-
-        .logo {
-            margin-bottom: 1rem;
-            font-size: 3.2rem;
-            font-weight: 800;
-            line-height: 1.5;
-            color: #000000;
-            font-family: Poppins;
-            text-align: center;
-        }
-
-        .logo .predict {
-        }
-
-        .logo .it {
-            font-size: 3.2rem;
-            font-weight: 800;
-            line-height: 1.5;
-            color: #aaff55;
-            font-family: Poppins;
-        }
-
-#home{
-          color: #43A047;
-          position: relative;
-          left: -140;
-          }
-
-    </style>
-</head>
-
-<body>
-    <div class="container" id="mainContainer">
-        <form id="contact" action="/chat" method="post" enctype="multipart/form-data">
-            <h3>
-
-                <p class="logo">
-                    <a href="{{ url_for('home') }}">
-                        <svg xmlns="http://www.w3.org/2000/svg" id="home" width="40" height="40" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
-                          <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
-                        </svg>
-                      </a>
-                    <span class="predict" style="font-family: poppins;">Chat</span>
-                    <span class="it">box</span>
-                </p>
-            </h3>
-            <div id="chat-container">
-                {% if input_text %}
-                <b><p style="color: #000000; font-size: medium;">You : {{ input_text }}</p></b>
-                {% endif%}
-                <br>
-                {% if response %}
-                <b><p style="color: #000000; font-size: medium;">PredictIT : {{ response }}</p></b>
-                {% endif%}
+p{
+    color: #000;
+    text-align: justify;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+.res{
+  color: #535353;
+  font-size: medium;
+}
+  </style>
+  <body>
+    <div class="chatbot1">
+        <div class="chatbox">
+          <div class="chat-container"></div>
+          <div class="chatbot-container">
+            <h1 class="chatbot2">Chatbot</h1>
+          </div>
+          <div style="z-index: -1;" id="div" class="div" rows="{17}" cols="{22}"> 
+            {% if input_text %}
+            <b><p style="color: #000000; font-size: medium;">You : </p></b><p class="res">{{ input_text }}</p>
+            {% endif%}
+            {% if response %}
+            <b><p style="color: #000000; font-size: medium;">PredictIT : </p></b><p class="res">{{ response }}</p>
+            {% endif%}
+          </div>
+          <form id="chat-form" action="/chat" method="post">
+            <div class="frame-parent3">
+              <input type="text" name="input_text" placeholder="Ask your doubts..." class="input-parent" />
             </div>
+            <button type="submit" class="but4">
+              <div class="send">Send</div>
+            </button>
+          </form>
+        </div>
+      </div>
+      <main class="background">
+        <img class="bg-1-icon" alt="" src="templates/assets/bg.jpg" />
+    
+        <a href="{{ url_for('home') }}"><button style="cursor: pointer;"><img
+          class="arrow-small-left-1-icon"
+          loading="lazy"
+          alt=""
+          src="templates/assets/arrow-small-left.png"
+        /></button></a>
+  <script>
 
-            <input placeholder="Ask your questions..." name="input_text" id="input_text" type="text" tabindex="7" required style="width: 300px;">
+    function selectImage() {
+    document.getElementById('imageInput').click();
+}
 
-            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Send</button>
-            <center>
-            <a style="font-size: medium; color: #00a108;" href="{{ url_for('predict') }}">Predict Now</a>
-            </center>
-        </form>
-    </div>
-</body>
+document.getElementById('imageInput').addEventListener('change', function() {
+    // Get the selected image file
+    var selectedImage = this.files[0];
+    
+    // Do something with the selected image, for example display it
+    displayImage(selectedImage);
+});
 
+document.getElementById('imageInput').addEventListener('change', function() {
+    var selectedImage = this.files[0];
+    displayResizedImage(selectedImage);
+});
+
+function displayResizedImage(imageFile) {
+    var reader = new FileReader();
+    
+    reader.onload = function(event) {
+        var imgElement = document.createElement('img');
+        imgElement.src = event.target.result;
+        
+        imgElement.style.maxWidth = '200px'; // Set default max width
+        imgElement.style.maxHeight = '200px'; // Set default max height
+        imgElement.style.position = 'absolute';
+        
+        var imageContainer = document.getElementById('div');
+        imageContainer.innerHTML = ''; // Clear previous content
+        imageContainer.appendChild(imgElement);
+        imgElement.style.left = '50%';
+        imgElement.style.top = '50%';
+        imgElement.style.transform = 'translate(-50%, -50%)';
+    };
+    
+    reader.readAsDataURL(imageFile);
+    
+}
+
+  </script>
 </html>

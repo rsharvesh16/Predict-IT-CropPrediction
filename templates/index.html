@@ -1,919 +1,1283 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8" />
-  <link rel="icon" href="/favicon.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <title>index</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A400%2C500%2C600%2C800%2C900"/>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%3A300%2C700"/>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Calibri%3A700"/>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C500%2C600%2C700%2C800%2C900"/>
-<style>
-  
-html {
-	font-size:62.5%;
-}
-* {
-	margin: 0;
-	padding: 0;
-}
-ul, li {
-	list-style: none;
-}
-input {
-	border: none;
-}
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Calibri:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400&display=swap"
+    />
+  </head>
+
+  <style>
+
 body {
-  width: 144rem;
-}.index-WSp {
-  width: 100%;
-  height: 244.2rem;
-  position: relative;
-  overflow: hidden;
-  background-color: #ffffff;
-}
-.index-WSp .component-3-w2L {
-  width: 150.8rem;
-  height: 57.8rem;
-  position: absolute;
-  left: 0;
-  top: 8.5rem;
-}
-.index-WSp .component-3-w2L .homenav-CMa {
-  width: 144rem;
-  height: 56.3rem;
-  position: absolute;
-  left: 6.8rem;
-  top: 0;
-  background-color: #ffffff;
-}
-.index-WSp .component-3-w2L .predict-before-plant-6xk {
-  width: 100.8rem;
-  height: 14.4rem;
-  position: absolute;
-  left: 28.3rem;
-  top: 2.8rem;
-  text-align: center;
-  font-size: 4rem;
-  font-weight: 700;
-  line-height: 1.2575;
-  color: #000000;
-  font-family: Calibri, 'Source Sans Pro';
-  white-space: nowrap;
-  display: flex;
-  align-items: baseline;
-}
-.index-WSp .component-3-w2L .predict-before-plant-6xk .predict-before-plant-6xk-sub-0 {
-  font-size: 9.6rem;
-  font-weight: 900;
-  line-height: 1.5;
-  color: #000000;
-  font-family: Poppins, 'Source Sans Pro';
-}
-.index-WSp .component-3-w2L .predict-before-plant-6xk .predict-before-plant-6xk-sub-1 {
-  font-size: 9.6rem;
-  font-weight: 900;
-  line-height: 1.5;
-  color: #7bf600;
-  font-family: Poppins, 'Source Sans Pro';
-}
-.index-WSp .component-3-w2L .predict-before-plant-6xk .predict-before-plant-6xk-sub-2 {
-  font-size: 9.6rem;
-  font-weight: 900;
-  line-height: 1.5;
-  color: #000000;
-  font-family: Poppins, 'Source Sans Pro';
-}
-.index-WSp .component-3-w2L .predict-before-plant-6xk .predict-before-plant-6xk-sub-3 {
-}
-.index-WSp .component-3-w2L .predict-but-wtp {
-  width: 23.3rem;
-  height: 5.4rem;
-  position: absolute;
-  left: 52.1rem;
-  top: 42.2rem;
-  font-size: 2.6rem;
-  font-weight: 800;
-  line-height: 1.5;
-  color: #ffffff;
-  font-family: Poppins, 'Source Sans Pro';
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #7bf600;
-  border-radius: 5rem;
-}
-.index-WSp .component-3-w2L .content-index-BYG {
-  width: 76.7rem;
-  height: 19.5rem;
-  position: absolute;
-  left: 41.4rem;
-  top: 17.9rem;
-  text-align: center;
-  font-size: 2.6rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #000000;
-  font-family: Poppins, 'Source Sans Pro';
-}
-.index-WSp .component-3-w2L .graph-tBn {
-  width: 26.4rem;
-  height: 33.8rem;
-  position: absolute;
-  left: 118.7rem;
-  top: 17.9rem;
-  object-fit: cover;
-  vertical-align: top;
-}
-.index-WSp .component-3-w2L .man-nY4 {
-  width: 43.9rem;
-  height: 42.1rem;
-  position: absolute;
-  left: .8rem;
-  top: 15.7rem;
-  object-fit: cover;
-  vertical-align: top;
-}
-.index-WSp .component-4-JmJ {
-  width: 144rem;
-  height: 9.3rem;
-  position: absolute;
-  left: 1rem;
-  top: 2rem;
-}
-.index-WSp .component-4-JmJ .header-DtG {
-  width: 144rem;
-  height: 8.5rem;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: #ffffff;
-}
-.index-WSp .component-4-JmJ .apple-touch-icon-mPz {
-  width: 4.9rem;
-  height: 4.5rem;
-  position: absolute;
-  left: 2.8rem;
-  top: 0;
-  object-fit: cover;
-  vertical-align: top;
-}
-.index-WSp .component-4-JmJ .predictit-hoS {
-  width: 13.9rem;
-  height: 4.8rem;
-  position: absolute;
-  left: 9rem;
-  top: 0;
-  font-size: 3.2rem;
-  font-weight: 800;
-  line-height: 1.5;
-  color: #000000;
-  font-family: Poppins, 'Source Sans Pro';
-  white-space: nowrap;
-  display: flex;
-  align-items: baseline;
-}
-.index-WSp .component-4-JmJ .predictit-hoS .predictit-hoS-sub-0 {
-}
-.index-WSp .component-4-JmJ .predictit-hoS .predictit-hoS-sub-1 {
-  font-size: 3.2rem;
-  font-weight: 800;
-  line-height: 1.5;
-  color: #aaff55;
-  font-family: Poppins, 'Source Sans Pro';
-}
-.index-WSp .component-4-JmJ .home-rpk {
-  width: 6rem;
-  height: 3rem;
-  position: absolute;
-  left: 100.3rem;
-  top: 1rem;
-  font-size: 2rem;
-  font-weight: 500;
-  line-height: 1.5;
-  color: #000000;
-  font-family: Poppins, 'Source Sans Pro';
-  white-space: nowrap;
-}
-.index-WSp .component-4-JmJ .about-us-Yha {
-  width: 9rem;
-  height: 3rem;
-  position: absolute;
-  left: 112rem;
-  top: 1rem;
-  font-size: 2rem;
-  font-weight: 500;
-  line-height: 1.5;
-  color: #000000;
-  font-family: Poppins, 'Source Sans Pro';
-  white-space: nowrap;
-}
-.index-WSp .component-4-JmJ .component-1-frame-1-fGQ {
-  width: 13.2rem;
-  height: 3.2rem;
-  position: absolute;
-  left: 125.1rem;
-  top: 1rem;
-  font-size: 2rem;
-  font-weight: 500;
-  line-height: 1.5;
-  color: #ffffff;
-  font-family: Poppins, 'Source Sans Pro';
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #7bf600;
-  border-radius: 5rem;
-}
-.index-WSp .auto-group-dx9r-XpQ {
-  box-sizing: border-box;
-  padding: 3.3rem 0rem 0rem 0.1rem;
-  width: 144rem;
-  height: 177.9rem;
-  position: absolute;
-  left: 0;
-  top: 66.3rem;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-}
-.index-WSp .auto-group-dx9r-XpQ .credit-omv {
-  margin: 0rem 25rem 7.3rem 25.4rem;
-  box-sizing: border-box;
-  padding-bottom: 0.2rem;
-  width: calc(100% - 50.4rem);
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-}
-.index-WSp .auto-group-dx9r-XpQ .credit-omv .empowering-predictit-with-google-gemini-pro-api--WRS {
-  margin: 0rem 4.7rem 0.7rem 0rem;
-  font-size: 2.6rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #000000;
-  font-family: Poppins, 'Source Sans Pro';
-  white-space: nowrap;
-  display: flex;
-  align-items: baseline;
-  flex-shrink: 0;
-}
-.index-WSp .auto-group-dx9r-XpQ .credit-omv .empowering-predictit-with-google-gemini-pro-api--WRS .empowering-predictit-with-google-gemini-pro-api--WRS-sub-0 {
-  font-size: 4rem;
-  font-weight: 700;
-  line-height: 1.2575;
-  color: #000000;
-  font-family: Calibri, 'Source Sans Pro';
+    margin: 0;
+    line-height: normal;
+  }
   
-}
-.index-WSp .auto-group-dx9r-XpQ .credit-omv .empowering-predictit-with-google-gemini-pro-api--WRS .empowering-predictit-with-google-gemini-pro-api--WRS-sub-1 {
-  font-size: 4rem;
-  font-weight: 700;
-  line-height: 1.2575;
-  color: #80ff01;
-  font-family: Calibri, 'Source Sans Pro';
-}
-.index-WSp .auto-group-dx9r-XpQ .credit-omv .empowering-predictit-with-google-gemini-pro-api--WRS .empowering-predictit-with-google-gemini-pro-api--WRS-sub-2 {
-  font-size: 4rem;
-  font-weight: 700;
-  line-height: 1.2575;
-  color: #000000;
-  font-family: Calibri, 'Source Sans Pro';
-}
-.index-WSp .auto-group-dx9r-XpQ .credit-omv .were-thrilled-to-introduce-the-driving-force-behind-the-dynamic-content-on-our-platform-the-google-gemini-api-this-cutting-edge-api-has-become-the-backbone-of-predictit-optimizing-content-creation-and-taking-it-to-unprecedented-levels-of-excellence-BpQ {
-  margin: 0rem 0.7rem 0.9rem 0rem;
-  max-width: 92.8rem;
-  font-size: 2.6rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #000000;
-  font-family: Poppins, 'Source Sans Pro';
-  flex-shrink: 0;
-  text-align: justify;
-}
-.index-WSp .auto-group-dx9r-XpQ .credit-omv .gemini-npC {
-  margin: 0rem 0.5rem 2.604rem 0rem;
-  width: 24.2rem;
-  height: 9.3962rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
-.index-WSp .auto-group-dx9r-XpQ .credit-omv .our-chatbot-is-designed-to-provide-instant-and-accurate-information-on-a-wide-range-of-topics-related-to-soil-health-crop-cultivation-and-agricultural-best-practices-whether-youre-a-seasoned-farmer-or-just-starting-your-journey-in-agriculture-our-chatbot-is-here-to-assist-you-JnY {
-  margin-left: 0.5rem;
-  max-width: 93.1rem;
-  font-size: 2.6rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #000000;
-  font-family: Poppins, 'Source Sans Pro';
-  flex-shrink: 0;
-  text-align: justify;
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 {
-  margin: 0rem 25rem 4rem 24.6rem;
-  box-sizing: border-box;
-  padding-top: 1rem;
-  width: calc(100% - 49.6rem);
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .why-choose-our-crop-yield-prediction-platform--cRr {
-  margin-bottom: 3.8rem;
-  width: 100%;
-  text-align: center;
-  font-size: 4rem;
-  font-weight: 700;
-  line-height: 1.2575;
-  color: #000000;
-  font-family: Calibri, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .adt-us-Wn8 {
-  width: 100%;
-  height: 77.5rem;
-  display: flex;
-  align-items: flex-start;
-  flex-shrink: 0;
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .adt-us-Wn8 .auto-group-rsre-etL {
-  margin-right: 7.3rem;
-  width: 26.5rem;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .adt-us-Wn8 .auto-group-rsre-etL .auto-group-ap8g-CQ4 {
-  margin-bottom: 4.8rem;
-  box-sizing: border-box;
-  padding: 3.2rem 2.3rem;
-  width: 100%;
-  height: 36rem;
-  background-color: #d9d9d9;
-  border-radius: 4rem;
-  flex-shrink: 0;
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .adt-us-Wn8 .auto-group-rsre-etL .auto-group-ap8g-CQ4 .accurate-predictions-leverage-the-power-of-naive-bayes-a-proven-algorithm-that-analyzes-historical-data-weather-patterns-and-soil-conditions-to-provide-accurate-crop-yield-predictions-44t {
-  max-width: 21.9rem;
-  display: flex;
-  font-size: 1.8rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #000000;
-  font-family: Poppins, 'Source Sans Pro';
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .adt-us-Wn8 .auto-group-rsre-etL .auto-group-ap8g-CQ4 .accurate-predictions-leverage-the-power-of-naive-bayes-a-proven-algorithm-that-analyzes-historical-data-weather-patterns-and-soil-conditions-to-provide-accurate-crop-yield-predictions-44t .accurate-predictions-leverage-the-power-of-naive-bayes-a-proven-algorithm-that-analyzes-historical-data-weather-patterns-and-soil-conditions-to-provide-accurate-crop-yield-predictions-44t-sub-0 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  line-height: 1.5;
-  color: #000000;
-  font-family: Poppins, 'Source Sans Pro';
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .adt-us-Wn8 .auto-group-rsre-etL .auto-group-ap8g-CQ4 .accurate-predictions-leverage-the-power-of-naive-bayes-a-proven-algorithm-that-analyzes-historical-data-weather-patterns-and-soil-conditions-to-provide-accurate-crop-yield-predictions-44t .accurate-predictions-leverage-the-power-of-naive-bayes-a-proven-algorithm-that-analyzes-historical-data-weather-patterns-and-soil-conditions-to-provide-accurate-crop-yield-predictions-44t-sub-1 {
-  font-size: 1.8rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #000000;
-  font-family: Poppins, 'Source Sans Pro';
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .adt-us-Wn8 .auto-group-rsre-etL .auto-group-2iwe-oaC {
-  box-sizing: border-box;
-  padding: 3.1rem 2.2rem 3.2rem 2.3rem;
-  width: 100%;
-  height: 36rem;
-  background-color: #aaff55;
-  border-radius: 4rem;
-  flex-shrink: 0;
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .adt-us-Wn8 .auto-group-rsre-etL .auto-group-2iwe-oaC .real-time-monitoring-stay-updated-with-real-time-information-on-weather-changes-market-trends-and-other-factors-influencing-crop-growth-make-adjustments-to-your-strategy-as-needed-to-ensure-a-successful-harvest-vui {
-  max-width: 22rem;
-  display: flex;
-  font-size: 1.8rem;
-  font-weight: 600;
-  line-height: 1.5;
-  color: #000000;
-  font-family: Poppins, 'Source Sans Pro';
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .adt-us-Wn8 .auto-group-rsre-etL .auto-group-2iwe-oaC .real-time-monitoring-stay-updated-with-real-time-information-on-weather-changes-market-trends-and-other-factors-influencing-crop-growth-make-adjustments-to-your-strategy-as-needed-to-ensure-a-successful-harvest-vui .real-time-monitoring-stay-updated-with-real-time-information-on-weather-changes-market-trends-and-other-factors-influencing-crop-growth-make-adjustments-to-your-strategy-as-needed-to-ensure-a-successful-harvest-vui-sub-0 {
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .adt-us-Wn8 .auto-group-rsre-etL .auto-group-2iwe-oaC .real-time-monitoring-stay-updated-with-real-time-information-on-weather-changes-market-trends-and-other-factors-influencing-crop-growth-make-adjustments-to-your-strategy-as-needed-to-ensure-a-successful-harvest-vui .real-time-monitoring-stay-updated-with-real-time-information-on-weather-changes-market-trends-and-other-factors-influencing-crop-growth-make-adjustments-to-your-strategy-as-needed-to-ensure-a-successful-harvest-vui-sub-1 {
-  font-size: 1.8rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #000000;
-  font-family: Poppins, 'Source Sans Pro';
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .adt-us-Wn8 .auto-group-ve9j-MtY {
-  margin-right: 6.2rem;
-  width: 26.5rem;
-  height: 100%;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .adt-us-Wn8 .auto-group-ve9j-MtY .auto-group-nzxg-hBi {
-  margin-bottom: 5.5rem;
-  box-sizing: border-box;
-  padding: 3.2rem 0rem 3.1rem 2.6rem;
-  width: 100%;
-  background-color: #aaff55;
-  border-radius: 4rem;
-  flex-shrink: 0;
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .adt-us-Wn8 .auto-group-ve9j-MtY .auto-group-nzxg-hBi .customized-recommendations-receive-tailored-insights-based-on-your-specific-soil-location-and-farming-practices-our-platform-understands-the-uniqueness-of-each-farm-ensuring-personalized-recommendations-for-optimal-results-2Dz {
-  max-width: 23.9rem;
-  display: flex;
-  font-size: 1.8rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #000000;
-  font-family: Poppins, 'Source Sans Pro';
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .adt-us-Wn8 .auto-group-ve9j-MtY .auto-group-nzxg-hBi .customized-recommendations-receive-tailored-insights-based-on-your-specific-soil-location-and-farming-practices-our-platform-understands-the-uniqueness-of-each-farm-ensuring-personalized-recommendations-for-optimal-results-2Dz .customized-recommendations-receive-tailored-insights-based-on-your-specific-soil-location-and-farming-practices-our-platform-understands-the-uniqueness-of-each-farm-ensuring-personalized-recommendations-for-optimal-results-2Dz-sub-0 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  line-height: 1.5;
-  color: #000000;
-  font-family: Poppins, 'Source Sans Pro';
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .adt-us-Wn8 .auto-group-ve9j-MtY .auto-group-nzxg-hBi .customized-recommendations-receive-tailored-insights-based-on-your-specific-soil-location-and-farming-practices-our-platform-understands-the-uniqueness-of-each-farm-ensuring-personalized-recommendations-for-optimal-results-2Dz .customized-recommendations-receive-tailored-insights-based-on-your-specific-soil-location-and-farming-practices-our-platform-understands-the-uniqueness-of-each-farm-ensuring-personalized-recommendations-for-optimal-results-2Dz-sub-1 {
-  font-size: 1.8rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #000000;
-  font-family: Poppins, 'Source Sans Pro';
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .adt-us-Wn8 .auto-group-ve9j-MtY .auto-group-bj64-CAQ {
-  box-sizing: border-box;
-  padding: 2.4rem 1.9rem 3.9rem 2.6rem;
-  width: 100%;
-  height: 36rem;
-  background-color: #d9d9d9;
-  border-radius: 4rem;
-  flex-shrink: 0;
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .adt-us-Wn8 .auto-group-ve9j-MtY .auto-group-bj64-CAQ .risk-mitigation-identify-potential-risks-early-in-the-season-and-implement-proactive-measures-to-protect-your-crops-our-platform-acts-as-your-virtual-farming-partner-guiding-you-towards-a-resilient-and-successful-harvest-uac {
-  max-width: 22rem;
-  display: flex;
-  font-size: 1.8rem;
-  font-weight: 600;
-  line-height: 1.5;
-  color: #000000;
-  font-family: Poppins, 'Source Sans Pro';
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .adt-us-Wn8 .auto-group-ve9j-MtY .auto-group-bj64-CAQ .risk-mitigation-identify-potential-risks-early-in-the-season-and-implement-proactive-measures-to-protect-your-crops-our-platform-acts-as-your-virtual-farming-partner-guiding-you-towards-a-resilient-and-successful-harvest-uac .risk-mitigation-identify-potential-risks-early-in-the-season-and-implement-proactive-measures-to-protect-your-crops-our-platform-acts-as-your-virtual-farming-partner-guiding-you-towards-a-resilient-and-successful-harvest-uac-sub-0 {
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .adt-us-Wn8 .auto-group-ve9j-MtY .auto-group-bj64-CAQ .risk-mitigation-identify-potential-risks-early-in-the-season-and-implement-proactive-measures-to-protect-your-crops-our-platform-acts-as-your-virtual-farming-partner-guiding-you-towards-a-resilient-and-successful-harvest-uac .risk-mitigation-identify-potential-risks-early-in-the-season-and-implement-proactive-measures-to-protect-your-crops-our-platform-acts-as-your-virtual-farming-partner-guiding-you-towards-a-resilient-and-successful-harvest-uac-sub-1 {
-  font-size: 1.8rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #000000;
-  font-family: Poppins, 'Source Sans Pro';
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .adt-us-Wn8 .auto-group-ueow-jxx {
-  width: 27.8rem;
-  height: 100%;
-  align-items: flex-end;
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .adt-us-Wn8 .auto-group-ueow-jxx .auto-group-unpv-Hja {
-  margin-bottom: 5.5rem;
-  box-sizing: border-box;
-  padding: 2.9rem 1.7rem;
-  width: 100%;
-  height: 36rem;
-  background-color: #d9d9d9;
-  border-radius: 4rem;
-  flex-shrink: 0;
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .adt-us-Wn8 .auto-group-ueow-jxx .auto-group-unpv-Hja .user-friendly-interface-no-technical-expertise-required-our-intuitive-interface-makes-it-easy-for-farmers-of-all-levels-to-access-and-understand-predictions-empowering-you-to-make-informed-decisions-cG4 {
-  max-width: 24.4rem;
-  display: flex;
-  font-size: 1.8rem;
-  font-weight: 600;
-  line-height: 1.5;
-  color: #000000;
-  font-family: Poppins, 'Source Sans Pro';
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .adt-us-Wn8 .auto-group-ueow-jxx .auto-group-unpv-Hja .user-friendly-interface-no-technical-expertise-required-our-intuitive-interface-makes-it-easy-for-farmers-of-all-levels-to-access-and-understand-predictions-empowering-you-to-make-informed-decisions-cG4 .user-friendly-interface-no-technical-expertise-required-our-intuitive-interface-makes-it-easy-for-farmers-of-all-levels-to-access-and-understand-predictions-empowering-you-to-make-informed-decisions-cG4-sub-0 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  line-height: 1.5;
-  color: #000000;
-  font-family: Poppins, 'Source Sans Pro';
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .adt-us-Wn8 .auto-group-ueow-jxx .auto-group-unpv-Hja .user-friendly-interface-no-technical-expertise-required-our-intuitive-interface-makes-it-easy-for-farmers-of-all-levels-to-access-and-understand-predictions-empowering-you-to-make-informed-decisions-cG4 .user-friendly-interface-no-technical-expertise-required-our-intuitive-interface-makes-it-easy-for-farmers-of-all-levels-to-access-and-understand-predictions-empowering-you-to-make-informed-decisions-cG4-sub-1 {
-  font-size: 1.8rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #000000;
-  font-family: Poppins, 'Source Sans Pro';
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .adt-us-Wn8 .auto-group-ueow-jxx .auto-group-5xgp-niG {
-  margin-left: 1.3rem;
-  box-sizing: border-box;
-  padding: 3.4rem 2.9rem 3.4rem 2.3rem;
-  height: 36rem;
-  background-color: #aaff55;
-  border-radius: 4rem;
-  flex-shrink: 0;
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .adt-us-Wn8 .auto-group-ueow-jxx .auto-group-5xgp-niG .data-security-rest-easy-knowing-that-your-farm-data-is-securely-stored-and-protected-we-prioritize-the-confidentiality-and-privacy-of-your-information-KCQ {
-  max-width: 21.3rem;
-  display: flex;
-  font-size: 1.8rem;
-  font-weight: 600;
-  line-height: 1.5;
-  color: #000000;
-  font-family: Poppins, 'Source Sans Pro';
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .adt-us-Wn8 .auto-group-ueow-jxx .auto-group-5xgp-niG .data-security-rest-easy-knowing-that-your-farm-data-is-securely-stored-and-protected-we-prioritize-the-confidentiality-and-privacy-of-your-information-KCQ .data-security-rest-easy-knowing-that-your-farm-data-is-securely-stored-and-protected-we-prioritize-the-confidentiality-and-privacy-of-your-information-KCQ-sub-0 {
-}
-.index-WSp .auto-group-dx9r-XpQ .component-2-Vs2 .adt-us-Wn8 .auto-group-ueow-jxx .auto-group-5xgp-niG .data-security-rest-easy-knowing-that-your-farm-data-is-securely-stored-and-protected-we-prioritize-the-confidentiality-and-privacy-of-your-information-KCQ .data-security-rest-easy-knowing-that-your-farm-data-is-securely-stored-and-protected-we-prioritize-the-confidentiality-and-privacy-of-your-information-KCQ-sub-1 {
-  font-size: 1.8rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #000000;
-  font-family: Poppins, 'Source Sans Pro';
-}
-.index-WSp .auto-group-dx9r-XpQ .footer-37-aGk {
-  box-sizing: border-box;
-  padding-top: 5rem;
-  width: 144rem;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff;
-  flex-shrink: 0;
-}
-.index-WSp .auto-group-dx9r-XpQ .footer-37-aGk .auto-group-nm9n-JyS {
-  box-sizing: border-box;
-  padding: 2.8rem 50.9rem 2.6rem 50.3rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  box-shadow: 0 0.8rem 0.8rem rgba(24, 39, 75, 0.0799999982), 0 0.4rem 0.6rem rgba(24, 39, 75, 0.1199999973);
-  background-color: #c4c4c4;
-  flex-shrink: 0;
-}
-.index-WSp .auto-group-dx9r-XpQ .footer-37-aGk .auto-group-nm9n-JyS .line-37-dF2 {
-  margin: 0rem 7.6rem 0.2rem 0rem;
-  width: 0;
-  height: 10.4rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
-.index-WSp .auto-group-dx9r-XpQ .footer-37-aGk .auto-group-nm9n-JyS .by-techtriad-sharvesh-kamalesh-murugesh-9DN {
-  margin: 0rem 6.9rem 0.2rem 0rem;
-  max-width: 28.3rem;
-  font-size: 1.8rem;
-  font-weight: 700;
-  line-height: 1.1725;
-  color: #37383c;
-  font-family: Roboto, 'Source Sans Pro';
-  flex-shrink: 0;
-}
-.index-WSp .auto-group-dx9r-XpQ .footer-37-aGk .auto-group-nm9n-JyS .line-38-33r {
-  margin-top: 0.2rem;
-  width: 0;
-  height: 10.4rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
-.index-WSp .auto-group-dx9r-XpQ .footer-37-aGk .auto-group-neeg-Xji {
-  box-sizing: border-box;
-  padding: 0rem 19rem 0rem 19.8rem;
-  width: 100%;
-  height: 4.8rem;
-  display: flex;
-  align-items: flex-end;
-  flex-shrink: 0;
-}
-.index-WSp .auto-group-dx9r-XpQ .footer-37-aGk .auto-group-neeg-Xji .logo-epL {
-  margin: 0rem 13.2rem 7.1rem 0rem;
-  box-sizing: border-box;
-  padding-right: 10.4rem;
-  height: 8.3rem;
-  display: flex;
-  align-items: flex-start;
-  flex-shrink: 0;
-}
-.index-WSp .auto-group-dx9r-XpQ .footer-37-aGk .auto-group-neeg-Xji .logo-epL .apple-touch-icon-ybi {
-  margin-right: 1.3rem;
-  width: 4.9rem;
-  height: 4.5rem;
+  :root {
+    /* fonts */
+    --font-poppins: Poppins;
+    --paragraph-regular-16: Roboto;
+    --font-calibri: Calibri;
+    --font-mulish: Mulish;
+  
+    /* font sizes */
+    --paragraph-regular-16-size: 16px;
+    --font-size-13xl: 32px;
+    --font-size-4xl: 23px;
+    --font-size-lg: 18px;
+    --font-size-21xl: 40px;
+    --font-size-5xl: 24px;
+    --font-size-xl: 20px;
+  
+    /* Colors */
+    --color-lightsteelblue: #adbce5;
+    --color-steelblue-100: #7a8ab3;
+    --color-steelblue-200: #436e8e;
+    --color-black: #000;
+    --color-white: #fff;
+    --color-lightslategray: #6994b5;
+    --color-gray-100: rgba(255, 255, 255, 0.18);
+    --color-gray-200: rgba(255, 255, 255, 0.16);
+  
+    /* Gaps */
+    --gap-base: 16px;
+    --gap-xl: 20px;
+    --gap-5xs: 8px;
+  
+    /* Paddings */
+    --padding-16xl: 35px;
+    --padding-xl: 20px;
+    --padding-sm: 14px;
+    --padding-8xs: 5px;
+    --padding-11xs: 2px;
+    --padding-5xs: 8px;
+    --padding-5xs-5: 7.5px;
+    --padding-21xl: 40px;
+    --padding-7xs: 6px;
+    --padding-451xl: 470px;
+    --padding-7xl: 26px;
+    --padding-216xl: 235px;
+    --padding-2xs-5: 10.5px;
+  
+    /* Border radiuses */
+    --br-31xl: 50px;
+    --br-6xl: 25px;
+    --br-3xs: 10px;
+    --br-8xs: 5px;
+    --br-xl: 20px;
+    --br-mini: 15px;
+  }
+    .logo-icon {
+  height: 50px;
+  width: 50px;
+  position: relative;
   object-fit: cover;
-  vertical-align: top;
-  flex-shrink: 0;
+  min-height: 50px;
 }
-.index-WSp .auto-group-dx9r-XpQ .footer-37-aGk .auto-group-neeg-Xji .logo-epL .predictit-Vpx {
-  font-size: 3.2rem;
+
+a{
+  color: #000;
+  text-decoration: none;
+}
+
+.it {
+  color: var(--color-lightsteelblue);
+}
+.predictit {
+  margin: 0;
+  height: 45px;
+  position: relative;
+  font-size: inherit;
   font-weight: 800;
-  line-height: 1.5;
-  color: #000000;
-  font-family: Poppins, 'Source Sans Pro';
+  font-family: inherit;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.logo-parent,
+.predictit-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.predictit-wrapper {
+  flex-direction: column;
+  padding: 3px 0 0;
+}
+.logo-parent {
+  height: 50px;
+  flex-direction: row;
+  gap: 9px;
+}
+.about-us {
+  height: 21px;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  flex-shrink: 0;
+  min-width: 92px;
   white-space: nowrap;
+}
+.predict-button {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-8xs) 0 0;
+}
+.chatbot {
+  height: 23px;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
   flex-shrink: 0;
+  min-width: 85px;
 }
-.index-WSp .auto-group-dx9r-XpQ .footer-37-aGk .auto-group-neeg-Xji .logo-epL .predictit-Vpx .predictit-Vpx-sub-0 {
-}
-.index-WSp .auto-group-dx9r-XpQ .footer-37-aGk .auto-group-neeg-Xji .logo-epL .predictit-Vpx .predictit-Vpx-sub-1 {
-  font-size: 3.2rem;
-  font-weight: 800;
-  line-height: 1.5;
-  color: #aaff55;
-  font-family: Poppins, 'Source Sans Pro';
-}
-.index-WSp .auto-group-dx9r-XpQ .footer-37-aGk .auto-group-neeg-Xji .all-rights-reserved-ViU {
-  margin: 0rem 19.3rem 1.05rem 0rem;
+.chatbot-wrapper {
   display: flex;
-  font-size: 1.2rem;
-  font-weight: 300;
-  line-height: 1.1725;
-  color: #000000;
-  font-family: Roboto, 'Source Sans Pro';
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 4px var(--padding-7xs) 0 0;
+}
+.detect-disease {
+  height: 21px;
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  flex-shrink: 0;
   white-space: nowrap;
-  flex-shrink: 0;
 }
-.index-WSp .auto-group-dx9r-XpQ .footer-37-aGk .auto-group-neeg-Xji .social-BLQ {
-  margin-bottom: 8.9rem;
-  height: 7.5rem;
+.predict-button1 {
   display: flex;
-  column-gap: 3.2rem;
-  align-items: flex-end;
-  flex-shrink: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-8xs) 0 0;
 }
-.index-WSp .auto-group-dx9r-XpQ .footer-37-aGk .auto-group-neeg-Xji .social-BLQ .auto-group-ul1j-6TN {
-  width: 9.2rem;
-  height: 100%;
-  flex-shrink: 0;
+.predict {
+  position: relative;
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  font-family: var(--font-poppins);
+  color: var(--color-white);
+  text-align: left;
+  display: inline-block;
+  min-width: 72px;
 }
-.index-WSp .auto-group-dx9r-XpQ .footer-37-aGk .auto-group-neeg-Xji .social-BLQ .auto-group-ul1j-6TN .follow-us-T32 {
-  margin-bottom: 2.3rem;
-  width: 100%;
-  text-align: center;
-  font-size: 1.8rem;
+.but,
+.predict-button-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.but {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-8xs) 28.5px;
+  background-color: var(--color-lightsteelblue);
+  border-radius: var(--br-3xs);
+}
+.but:hover {
+  background-color: var(--color-steelblue-100);
+}
+
+.main-but {
+  cursor: pointer;
+  border: 0;
+  padding: 15px 80px;
+  background-color: var(--color-steelblue-200);
+  border-radius: var(--br-3xs);
+  position: absolute;
+  top: 28%;
+  right : 26.5%;
+  z-index: 1;
+}
+.main-but:hover {
+  background-color: var(--color-steelblue-100);
+}
+
+.predict-button-parent {
+  align-self: stretch;
+  gap: 28px;
+}
+.try-now{
+  position: absolute;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: var(--font-poppins);
+  color: var(--color-white);
+  text-align: left;
+  display: inline-block;
+  min-width: 120px;
+}
+.but1 {
+  border: 0;
+  padding: var(--padding-5xs) 68.3px;
+  background-color: var(--color-steelblue-200);
+  position: absolute;
+  top: 230px;
+  left: 3px;
+  border-radius: var(--br-3xs);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.but1:hover{
+    background-color: #dfebe9;
+}
+.but2:hover {
+  background-color: var(--color-lightslategray);
+}
+.plant {
+  color: var(--color-lightsteelblue);
+}
+.span {
+  color: var(--color-black);
+}
+.blank-line,
+.predict-before-plant {
+  margin: 0;
+}
+.predict-before-plant-container {
+  margin: 0;
+  height: 349px;
+  flex: 1;
+  position: relative;
+  font-size: inherit;
   font-weight: 700;
-  line-height: 1.1725;
-  color: #37383c;
-  font-family: Roboto, 'Source Sans Pro';
-  white-space: nowrap;
+  font-family: inherit;
+  display: inline-block;
+  z-index: 1;
 }
-.index-WSp .auto-group-dx9r-XpQ .footer-37-aGk .auto-group-neeg-Xji .social-BLQ .auto-group-ul1j-6TN .auto-group-dhbs-9Re {
+.main-removebg-1-icon {
+  height: 439px;
+  width: 672.4px;
+  position: absolute;
+  margin: 0 !important;
+  top: calc(50% - 219.5px);
+  left: -658.5px;
+  object-fit: cover;
+  z-index: 2;
+}
+.predict-before-plant-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+  height: 100%;
 }
-.index-WSp .auto-group-dx9r-XpQ .footer-37-aGk .auto-group-neeg-Xji .social-BLQ .auto-group-ul1j-6TN .auto-group-dhbs-9Re .social-JJY {
-  margin-right: 3.2rem;
-  width: 3rem;
-  height: 3rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
-.index-WSp .auto-group-dx9r-XpQ .footer-37-aGk .auto-group-neeg-Xji .social-BLQ .auto-group-ul1j-6TN .auto-group-dhbs-9Re .social-qZN {
-  width: 3rem;
-  height: 3rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
-.index-WSp .auto-group-dx9r-XpQ .footer-37-aGk .auto-group-neeg-Xji .social-BLQ .social-amr {
-  width: 3rem;
-  height: 3rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
-.index-WSp .auto-group-dx9r-XpQ .footer-37-aGk .auto-group-neeg-Xji .social-BLQ .social-Xwz {
-  width: 3rem;
-  height: 3rem;
+.but-parent {
+  width: 460.5px;
+  height: 349px;
   position: relative;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
+  max-width: 100%;
+  font-size: 70px;
+  margin-top: -8%;
+  margin-bottom: 7%;
 }
-.index-WSp .auto-group-dx9r-XpQ .footer-37-aGk .auto-group-neeg-Xji .social-BLQ .social-tXe {
-  width: 3rem;
-  height: 3rem;
+.frame-parent,
+.logo-component-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.frame-parent {
+  align-self: stretch;
+  align-items: flex-end;
+  gap: 146px;
+}
+.logo-component-inner {
+  width: 547px;
+  align-items: flex-start;
+  padding: var(--padding-5xs) 0 0;
+  box-sizing: border-box;
+  font-size: var(--font-size-xl);
+}
+.logo-component,
+.logo-component-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.logo-component {
+  width: 1119px;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.logo-component-wrapper {
+  align-self: stretch;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: var(--font-size-13xl);
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+}
+.chatbot-1-icon {
+  width: 60px;
+  height: 60px;
   position: relative;
-  object-fit: contain;
-  vertical-align: top;
+  object-fit: cover;
+}
+.empowering-predictit-with {
+  margin: 0;
+}
+.gemini-1-icon,
+.tite,
+.txt1 {
+  position: relative;
+  max-width: 100%;
+}
+.tite {
+  margin: 0;
+  width: 915.2px;
+  font-size: var(--font-size-21xl);
+  font-weight: 700;
+  font-family: var(--font-calibri);
+  display: inline-block;
+}
+.gemini-1-icon,
+.txt1 {
+  flex: 1;
+}
+.txt1 {
+  height: 210.7px;
+  white-space: pre-wrap;
+  display: inline-block;
+  min-width: 347px;
+}
+.gemini-1-icon {
+  align-self: stretch;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.gemini-1-wrapper,
+.header-layout-container,
+.txt1-parent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.gemini-1-wrapper {
+  height: 184.6px;
+  width: 360px;
+  flex-direction: column;
+  padding: 45px 0 0;
+  box-sizing: border-box;
+  min-width: 360px;
+}
+.header-layout-container,
+.txt1-parent {
+  flex-direction:1;
+}
+.txt1-parent {
+  flex: 1;
+  gap: 20.6px;
+}
+.header-layout-container {
+  align-self: stretch;
+  padding: 0 var(--padding-7xs) 0 var(--padding-11xs);
+  box-sizing: border-box;
+}
+.txt2 {
+  align-self: stretch;
+  height: 158px;
+  position: relative;
+  white-space: pre-wrap;
+  display: inline-block;
   flex-shrink: 0;
+  margin-top: 2%;
+}
+.arrow-up-right-1-icon,
+.txt21 {
+  position: absolute;
+  margin: 0 !important;
+  z-index: 1;
+}
+.txt21 {
+  top: 20px;
+  font-weight: 600;
+  color: var(--color-steelblue-200);
+  display: inline-block;
+  min-width: 109px;
+}
+.arrow-up-right-1-icon {
+  width: 20px;
+  height: 20px;
+  right: 273px;
+  bottom: 24.5px;
+  object-fit: cover;
+}
+.txt2-parent {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  max-width: 100%;
+  margin-bottom: 5%;
+}
+.frame-wrapper {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 0 0 var(--padding-11xs);
+  box-sizing: border-box;
+}
+.chatbot-1-parent,
+.frame-wrapper,
+.tite-parent,
+.txt-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.tite-parent {
+  width: 930px;
+  flex-direction: column;
+  gap: 10.1px;
+}
+.chatbot-1-parent,
+.txt-content {
+  align-self: stretch;
+  flex-direction: row;
+}
+.chatbot-1-parent {
+  flex-direction: column;
+  align-items: flex-end;
+  position: fixed;
+  bottom: 30px;
+  right : 20px;
+  gap: 39px;
+}
+.man-icon {
+  height: 359px;
+  width: 400px;
+  position: absolute;
+  margin: 0 !important;
+  bottom: -109.6px;
+  left: -390px;
+  object-fit: cover;
+}
+.are-you-ready {
+  margin: 0;
+  font-weight: 600;
+}
+.our-innovative-crop {
+  margin: 0;
+  white-space: pre-wrap;
+  margin-top: -5%;
+}
+.content-index,
+.man-parent {
+  position: relative;
+  max-width: 100%;
+}
+.content-index {
+  height: 235.4px;
+  flex: 1;
+  display: inline-block;
+  z-index: 1;
+}
+.man-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.predict1 {
+  position: relative;
+  font-size: var(--font-size-4xl);
+  font-weight: 600;
+  font-family: var(--font-poppins);
+  color: var(--color-white);
+  text-align: left;
+  display: inline-block;
+  min-width: 83px;
+}
+.but2,
+.frame-container,
+.frame-div {
+  display: flex;
+  align-items: flex-start;
+}
+.but2 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-5xs-5) 53.5px;
+  background-color: var(--color-steelblue-200);
+  border-radius: var(--br-3xs);
+  flex-direction: row;
+  justify-content: flex-start;
+  z-index: 1;
+}
+.frame-container,
+.frame-div {
+  max-width: 100%;
+}
+.frame-div {
+  width: 550px;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 32.6px;
+}
+.frame-container {
+  width: 860px;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+  box-sizing: border-box;
+}
+.detect-disease-button,
+.frame-group {
+  width: 1085px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 113px;
+  max-width: 100%;
+}
+.detect-disease-button {
+  width: 1179px;
+  gap: 45px;
+}
+.detect-disease-button-wrapper {
+  width: 1379px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 var(--padding-xl) 31px;
+  box-sizing: border-box;
+  max-width: 100%;
+  text-align: justify;
+  font-size: var(--font-size-4xl);
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+}
+.get-ready-to {
+  margin: 0;
+  font-weight: 600;
 }
 
-.chatbut{
-width: 23.3rem;
-height: 5.4rem;
-position: absolute;
-left: 78.1rem;
-top: 42.2rem;
-font-size: 2.6rem;
-font-weight: 800;
-line-height: 1.5;
-color: #7bf600;
-font-family: Poppins, 'Source Sans Pro';
-white-space: nowrap;
-display: flex;
-align-items: center;
-justify-content: center;
-background-color: white;
-border-radius: 5rem;
-} 
-</style>
-</head>
-<body>
-<div class="index-WSp">
-  <div class="component-3-w2L">
-    <div class="homenav-CMa">
-    </div>
-    <p class="predict-before-plant-6xk">
-      <span class="predict-before-plant-6xk-sub-0">Predict before </span>
-      <span class="predict-before-plant-6xk-sub-1">Plant</span>
-      <span class="predict-before-plant-6xk-sub-2">
-      .
-      <br/>
-      
-      </span>
-      <span class="predict-before-plant-6xk-sub-3">
-      
-      <br/>
-      
-      </span>
-    </p>
-    <a style="text-decoration: none; cursor: pointer;" href="{{ url_for('predict') }}">
-    <button class="predict-but-wtp"> Predict Now</button>
-    </a>
-    <a style="text-decoration: none; cursor: pointer;" href="{{ url_for('chat') }}">
-      <button class="chatbut">Chatbot</button>
-  </a>
-    <p class="content-index-BYG">
-    Are you ready to revolutionize your farming experience? 
-    <br/>
-    Our innovative Crop Yield Prediction tool, powered by the Random forest algorithm, brings precision and intelligence to your agricultural practices. Say goodbye to uncertainties and hello to optimized yields!
-    </p>
-    <img class="graph-tBn" src="./assets/graph.png"/>
-    <img class="man-nY4" src="./assets/man.png"/>
-  </div>
-  <div class="component-4-JmJ">
-    <div class="header-DtG">
-    </div>
-    <img class="apple-touch-icon-mPz" src="./assets/apple-touch-icon.png"/>
-    <p class="predictit-hoS">
-      <span class="predictit-hoS-sub-0">Predict</span>
-      <span class="predictit-hoS-sub-1">it</span>
-    </p>
-    <button id="abtus" style="background: none; border: none;" class="home-rpk">About us</button>
-    <button id="feat" style="background: none; border: none;" class="about-us-Yha">Features</button>
-    <a style="text-decoration: none; cursor: pointer;" href="{{ url_for('predict') }}">
-      <button class="component-1-frame-1-fGQ">Predict</button>
-    </a>
-  </div>
-  <div class="auto-group-dx9r-XpQ">
-    <div class="credit-omv">
-      <p class="empowering-predictit-with-google-gemini-pro-api--WRS">
-        <span class="empowering-predictit-with-google-gemini-pro-api--WRS-sub-0">Empowering PredictIT with Google Gemini Pro API:</span>
+.powered-by-state-of-the-art-co {
+  margin: 0;
+  z-index: 1;
+}
+.content-index1 {
+  height: 306px;
+  width: 568px;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  z-index: -1;
+  margin-top: 5%;
+}
+.detect {
+  position: relative;
+  font-size: var(--font-size-4xl);
+  font-weight: 600;
+  font-family: var(--font-poppins);
+  color: var(--color-white);
+  text-align: left;
+  display: inline-block;
+  min-width: 77px;
+}
+.detect-1-icon {
+  width: 23px;
+  height: 23px;
+  position: relative;
+  object-fit: cover;
+}
+.but3,
+.detect-1-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.detect-1-wrapper {
+  height: 29px;
+  flex-direction: column;
+  padding: var(--padding-7xs) 0 0;
+  box-sizing: border-box;
+}
+.but3 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-5xs-5) var(--padding-21xl);
+  background-color: var(--color-steelblue-200);
+  border-radius: var(--br-3xs);
+  flex-direction: row;
+  gap: 10px;
+}
+.but3:hover{
+  background-color: var(--color-lightslategray);
+}
+.main4-1-icon {
+  align-self: stretch;
+  height: 340px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.main4-1-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 0 var(--padding-5xs);
+  box-sizing: border-box;
+  min-width: 234px;
+  max-width: 100%;
+}
+.content-index-parent,
+.footer-layout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.content-index-parent {
+  width: 930px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  padding: var(--padding-5xs) 0 0 378px;
+  position: relative;
+  gap: 2px;
+}
+.footer-layout {
+  align-self: stretch;
+  align-items: flex-start;
+  padding: 0 var(--padding-xl) 0 24px;
+  text-align: justify;
+  font-size: var(--font-size-4xl);
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+  margin-top: 20px;
+  margin-bottom: 30px;
+  z-index: 1;
+}
+.div-foot {
+  width: 1440px;
+  height: 274px;
+  position: relative;
+  background-color: var(--color-lightsteelblue);
+  display: none;
+  max-width: 100%;
+}
+.android-chrome-512x512-1-icon {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  object-fit: cover;
+  min-height: 50px;
+  z-index: 1;
+}
+.it1 {
+  color: var(--color-white);
+  display: flex;
+  text-align: right;
+}
+.predictit1 {
+  margin: 0;
+  height: 45px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 800;
+  font-family: inherit;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 1;
+  width: max-content;
+}
+.predict-call-to-action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-11xs) 0 0;
+}
+.android-chrome-512x512-1-parent,
+.footer-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.android-chrome-512x512-1-parent {
+  align-self: stretch;
+  gap: 5px;
+}
+.footer-inner {
+  height: 50px;
+  padding: 0 59px;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.home {
+  position: relative;
+  line-height: 150%;
+  display: inline-block;
+  min-width: 44px;
+  z-index: 1;
+}
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-11xs) 0 0;
+}
+.about,
+.detect1 {
+  position: relative;
+  line-height: 150%;
+  display: inline-block;
+  min-width: 43px;
+  z-index: 1;
+}
+.detect1 {
+  min-width: 47px;
+}
+.detect-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-11xs) 0 0;
+}
+.contact-us {
+  position: relative;
+  line-height: 150%;
+  display: inline-block;
+  min-width: 79px;
+  z-index: 1;
+}
+.contact-us-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-11xs) 0 0;
+}
+.frame-parent2 {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+}
+.ce2a131-3cac-481f-af77-d0eb250-icon,
+.fbe55-c3ec-495c-aff1-e6b68a653-icon {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  border-radius: var(--br-31xl);
+  object-fit: cover;
+  min-height: 50px;
+  z-index: 1;
+}
+.fbececcaffebae-color {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-8xs) 0 0;
+  box-sizing: border-box;
+  gap: 12px;
+  min-width: 76px;
+}
+.c0-4f19-a8a5-7a0c96c20ca9-1-icon,
+.img-1-icon {
+  height: 50.1px;
+  width: 50px;
+  position: relative;
+  border-radius: var(--br-31xl);
+  object-fit: cover;
+  min-height: 50px;
+  z-index: 1;
+}
+.img-1-icon {
+  height: 50px;
+  border-radius: var(--br-6xl);
+}
+.cfaacca-logo {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 11px;
+  min-width: 72px;
+}
+.f2533a64-e44c-42b2-bca9-31ccce-icon {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  border-radius: var(--br-31xl);
+  object-fit: cover;
+  min-height: 50px;
+  z-index: 1;
+}
+.fbececcaffebae-color-parent,
+.frame-wrapper1 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.fbececcaffebae-color-parent {
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: var(--gap-base);
+}
+.frame-wrapper1 {
+  align-self: stretch;
+  justify-content: flex-end;
+  padding: 0 var(--padding-sm) 0 18px;
+}
+.copyright-predictit {
+  width: 166px;
+  position: relative;
+  line-height: 150%;
+  display: inline-block;
+  z-index: 1;
+}
+.c-e-predictit-copyright {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 22px 0 var(--padding-xl);
+  text-align: center;
+  color: var(--color-steelblue-200);
+  font-family: var(--font-poppins);
+}
+.footer,
+.frame-parent1,
+.index {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.frame-parent1 {
+  align-self: stretch;
+  align-items: flex-end;
+  gap: 22px;
+  font-size: var(--paragraph-regular-16-size);
+  font-family: var(--paragraph-regular-16);
+}
+.footer,
+.index {
+  box-sizing: border-box;
+}
+.footer {
+  align-self: stretch;
+  background-color: var(--color-lightsteelblue);
+  align-items: flex-start;
+  padding: 30px 507px 19px 591px;
+  gap: 31px;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-13xl);
+  color: var(--color-black);
+  font-family: var(--font-poppins);
+}
+.index {
+  width: 100%;
+  position: relative;
+  background-color: #dfebe9;
+  overflow: hidden;
+  align-items: flex-end;
+  padding: var(--padding-16xl) 0 0;
+  gap: 95px;
+  letter-spacing: normal;
+}
+@media screen and (max-width: 750px) {
+  .frame-parent {
+    gap: 73px 146px;
+  }
+  .chatbot-1-parent {
+    gap: 19px 39px;
+  }
+  .frame-div {
+    gap: 16px 32.6px;
+  }
+  .frame-group {
+    gap: 28px 113px;
+  }
+  .detect-disease-button {
+    gap: 22px 45px;
+  }
+  .footer {
+    gap: 15px 31px;
+    padding-left: 295px;
+    padding-right: 253px;
+    box-sizing: border-box;
+  }
+  .index {
+    gap: 47px 95px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .predict-before-plant-container {
+    font-size: 42px;
+  }
+  .frame-parent {
+    gap: 36px 146px;
+  }
+  .tite {
+    font-size: var(--font-size-5xl);
+  }
+  .txt1 {
+    font-size: var(--font-size-lg);
+  }
+  .gemini-1-wrapper,
+  .txt1 {
+    min-width: 100%;
+  }
+  .content-index,
+  .content-index1,
+  .detect,
+  .predict1,
+  .txt2,
+  .txt21 {
+    font-size: var(--font-size-lg);
+  }
+  .content-index-parent {
+    padding-left: 94px;
+    box-sizing: border-box;
+  }
+  .predictit1 {
+    font-size: 19px;
+  }
+  .footer-inner {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+  .frame-parent2 {
+    flex-wrap: wrap;
+  }
+  .footer {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+  .index {
+    gap: 24px 95px;
+  }
+}
+  </style>
+  <body>
+    <div class="index">
+      <section class="detect-disease-button-wrapper">
+        <div class="detect-disease-button">
+          <header class="logo-component-wrapper">
+            <div class="logo-component">
+              <div class="logo-parent">
+                <img
+                  class="logo-icon"
+                  loading="lazy"
+                  alt=""
+                  src="templates/assets/logo-main.png"
+                />
 
-        <br>
-        
-        </span>
-      </p>
-      <p class="were-thrilled-to-introduce-the-driving-force-behind-the-dynamic-content-on-our-platform-the-google-gemini-api-this-cutting-edge-api-has-become-the-backbone-of-predictit-optimizing-content-creation-and-taking-it-to-unprecedented-levels-of-excellence-BpQ">We&#39;re thrilled to introduce the driving force behind the dynamic content on our platform - the Google Gemini API. This cutting-edge API has become the backbone of PredictIT, optimizing content creation and taking it to unprecedented levels of excellence.</p>
-      <img class="gemini-npC" src="./assets/gemini.png"/>
-      <p class="our-chatbot-is-designed-to-provide-instant-and-accurate-information-on-a-wide-range-of-topics-related-to-soil-health-crop-cultivation-and-agricultural-best-practices-whether-youre-a-seasoned-farmer-or-just-starting-your-journey-in-agriculture-our-chatbot-is-here-to-assist-you-JnY">Our chatbot is designed to provide instant and accurate information on a wide range of topics related to soil health, crop cultivation, and agricultural best practices. Whether you&#39;re a seasoned farmer or just starting your journey in agriculture, our chatbot is here to assist you.</p>
-    </div>
-    <div class="component-2-Vs2">
-      <p id="tarfeat" class="why-choose-our-crop-yield-prediction-platform--cRr">Why Choose Our Crop Yield Prediction Platform ?</p>
-      <div class="adt-us-Wn8">
-        <div class="auto-group-rsre-etL">
-          <div class="auto-group-ap8g-CQ4">
-            <div class="accurate-predictions-leverage-the-power-of-naive-bayes-a-proven-algorithm-that-analyzes-historical-data-weather-patterns-and-soil-conditions-to-provide-accurate-crop-yield-predictions-44t">
-              <span class="accurate-predictions-leverage-the-power-of-naive-bayes-a-proven-algorithm-that-analyzes-historical-data-weather-patterns-and-soil-conditions-to-provide-accurate-crop-yield-predictions-44t-sub-0">Accurate Predictions:<br </span>
-              <span class="accurate-predictions-leverage-the-power-of-naive-bayes-a-proven-algorithm-that-analyzes-historical-data-weather-patterns-and-soil-conditions-to-provide-accurate-crop-yield-predictions-44t-sub-1"> Leverage the power of Naive Bayes, a proven algorithm that analyzes historical data, weather patterns, and soil conditions to provide accurate crop yield predictions</span>
+                <div id="head" class="predictit-wrapper">
+                  <h3 class="predictit">
+                    <span>Predict</span>
+                    <span class="it">it</span>
+                  </h3>
+
+                </div>
+
+              </div>
+
+              <div class="logo-component-inner">
+                <div class="frame-parent">
+                  <div class="predict-button-parent">
+                    <a style="cursor: pointer;" id="abtus" class="predict-button">
+                      <div class="about-us">About us</div>
+                    </a>
+                    <a href="{{ url_for('chat') }}" class="chatbot-wrapper">
+                      <div class="chatbot">Chatbot</div>
+                    </a>
+                    <a href="{{ url_for('detect') }}"  class="predict-button1">
+                      <div class="detect-disease">Detect Disease</div>
+                    </a>
+                    <a href="{{ url_for('predict') }}"><button class="but">
+                      <div class="predict">Predict</div>
+                    </button></a>
+                  </div>
+                  <div class="but-parent">                   
+                    <div class="predict-before-plant-parent">
+                      <h1 class="predict-before-plant-container">
+                        <p class="predict-before-plant">
+                          <span>Predict before </span>
+                          <span class="plant">Plant</span>
+                          <span class="span"></span>
+                        </p>
+                        
+                      </h1>
+                      <img
+                        class="main-removebg-1-icon"
+                        loading="lazy"
+                        alt=""
+                        src="templates/assets/main-removebg.png"
+                      />
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
             </div>
-          </div>
-          <div class="auto-group-2iwe-oaC">
-            <div class="real-time-monitoring-stay-updated-with-real-time-information-on-weather-changes-market-trends-and-other-factors-influencing-crop-growth-make-adjustments-to-your-strategy-as-needed-to-ensure-a-successful-harvest-vui">
-              <span class="real-time-monitoring-stay-updated-with-real-time-information-on-weather-changes-market-trends-and-other-factors-influencing-crop-growth-make-adjustments-to-your-strategy-as-needed-to-ensure-a-successful-harvest-vui-sub-0">Real-Time Monitoring: <br</span>
-              <span class="real-time-monitoring-stay-updated-with-real-time-information-on-weather-changes-market-trends-and-other-factors-influencing-crop-growth-make-adjustments-to-your-strategy-as-needed-to-ensure-a-successful-harvest-vui-sub-1">Stay updated with real-time information on weather changes, market trends, and other factors influencing crop growth. Make adjustments to your strategy as needed to ensure a successful harvest.</span>
+          </header>
+          <a href="{{ url_for('predict') }}"><button class="main-but">
+            <div class="predict">Try Now</div>
+           </button></a>
+
+          <div class="frame-group">
+            <div class="chatbot-1-parent">
+              <a href="{{ url_for('chat') }}"><img
+                class="chatbot-1-icon"
+                loading="lazy"
+                alt=""
+                src="/templates/assets/chatbot-speech-bubble.png"
+              /></div></a>
+
+              <div class="txt-content">
+                <div class="tite-parent">
+                  <h2 class="tite">
+                    <p class="empowering-predictit-with">
+                      Empowering Predictit with Google Gemini Pro :
+                    </p>
+                  </h2>
+                  <div class="header-layout-container">
+                    <div class="txt1-parent">
+                      <div class="txt1">
+                        We're thrilled to introduce the driving force behind the dynamic content on our platform - the Google Gemini API.This cutting-edge API has become the backbone of PredictIT, optimizing content creation and taking it to unprecedented levels of excellence.
+                      </div>
+                      <div class="gemini-1-wrapper">
+                        <img
+                          class="gemini-1-icon"
+                          loading="lazy"
+                          alt=""
+                          src="templates/assets/gemini.png"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="frame-wrapper">
+                    <div class="txt2-parent">
+                      <div class="txt2">
+                        Our chatbot is designed to provide instant and accurate information on a wide range of topics related to soil health, crop cultivation, and agricultural best practices. Whether you're a seasoned farmer or just starting your journey in agriculture, our chatbot is here to assist you.
+                      
+                    </div>
+                    <a href="{{ url_for('chat') }}" class="txt21">chat now</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="frame-container">
+              <div class="frame-div">
+                <div class="man-parent">
+                  <img
+                    class="man-icon"
+                    loading="lazy"
+                    alt=""
+                    src="templates/assets/man.png"
+                  />
+
+                  <div class="content-index">
+                    <p class="are-you-ready">
+                      Are you ready to revolutionize your farming experience?
+                    </p>
+                    <p class="our-innovative-crop">
+                      Our innovative Crop Yield Prediction tool, powered by the Random forest algorithm, brings precision and intelligence to your agricultural practices. Say goodbye to uncertainties and hello to optimized yields!
+                    </p>
+                  </div>
+                </div>
+                <a href="{{url_for('predict')}}"><button class="but2">
+                  <div class="predict1">Predict</div>
+                </button></a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="auto-group-ve9j-MtY">
-          <div class="auto-group-nzxg-hBi">
-            <div class="customized-recommendations-receive-tailored-insights-based-on-your-specific-soil-location-and-farming-practices-our-platform-understands-the-uniqueness-of-each-farm-ensuring-personalized-recommendations-for-optimal-results-2Dz">
-              <span class="customized-recommendations-receive-tailored-insights-based-on-your-specific-soil-location-and-farming-practices-our-platform-understands-the-uniqueness-of-each-farm-ensuring-personalized-recommendations-for-optimal-results-2Dz-sub-0">Customized Recommendations:<br</span>
-              <span class="customized-recommendations-receive-tailored-insights-based-on-your-specific-soil-location-and-farming-practices-our-platform-understands-the-uniqueness-of-each-farm-ensuring-personalized-recommendations-for-optimal-results-2Dz-sub-1">   Receive tailored insights based on your specific soil, location, and farming practices. Our platform understands the uniqueness of each farm, ensuring personalized recommendations for optimal results.</span>
-            </div>
-          </div>
-          <div class="auto-group-bj64-CAQ">
-            <div class="risk-mitigation-identify-potential-risks-early-in-the-season-and-implement-proactive-measures-to-protect-your-crops-our-platform-acts-as-your-virtual-farming-partner-guiding-you-towards-a-resilient-and-successful-harvest-uac">
-              <span class="risk-mitigation-identify-potential-risks-early-in-the-season-and-implement-proactive-measures-to-protect-your-crops-our-platform-acts-as-your-virtual-farming-partner-guiding-you-towards-a-resilient-and-successful-harvest-uac-sub-0">
-              Risk Mitigation: 
-              <br
-              
+      </section>
+      <section class="footer-layout">
+        <div class="content-index-parent">
+          <div class="content-index1">
+            <p class="get-ready-to">
+              Get ready to transform your crop management with our cutting-edge Disease Detection tool!
+            </p>
+            <p class="powered-by-state-of-the-art-co">
+              <!-- <span class="span1"> </span> -->
+              <span>
+                Powered by state-of-the-art Convolutional Neural Networks (CNNs) and bolstered by Transfer Learning using VGG16 and ResNet architectures, our solution ensures precise identification of crop diseases. Bid farewell to uncertainties and welcome optimized crop health!
               </span>
-              <span class="risk-mitigation-identify-potential-risks-early-in-the-season-and-implement-proactive-measures-to-protect-your-crops-our-platform-acts-as-your-virtual-farming-partner-guiding-you-towards-a-resilient-and-successful-harvest-uac-sub-1">Identify potential risks early in the season and implement proactive measures to protect your crops. Our platform acts as your virtual farming partner, guiding you towards a resilient and successful harvest.</span>
-            </div>
+            </p>
           </div>
-        </div>
-        <div class="auto-group-ueow-jxx">
-          <div class="auto-group-unpv-Hja">
-            <div class="user-friendly-interface-no-technical-expertise-required-our-intuitive-interface-makes-it-easy-for-farmers-of-all-levels-to-access-and-understand-predictions-empowering-you-to-make-informed-decisions-cG4">
-              <span class="user-friendly-interface-no-technical-expertise-required-our-intuitive-interface-makes-it-easy-for-farmers-of-all-levels-to-access-and-understand-predictions-empowering-you-to-make-informed-decisions-cG4-sub-0">
-              User-Friendly Interface: 
-              <br
-              
-              </span>
-              <span class="user-friendly-interface-no-technical-expertise-required-our-intuitive-interface-makes-it-easy-for-farmers-of-all-levels-to-access-and-understand-predictions-empowering-you-to-make-informed-decisions-cG4-sub-1">No technical expertise required! Our intuitive interface makes it easy for farmers of all levels to access and understand predictions, empowering you to make informed decisions.</span>
+          <a href="{{ url_for('detect' )}}"><button class="but3">
+            <div class="detect">Detect</div>
+            <div class="detect-1-wrapper">
+              <img
+                class="detect-1-icon"
+                alt=""
+                src="templates/assets/detect.png"
+              />
             </div>
-          </div>
-          <div class="auto-group-5xgp-niG">
-            <div class="data-security-rest-easy-knowing-that-your-farm-data-is-securely-stored-and-protected-we-prioritize-the-confidentiality-and-privacy-of-your-information-KCQ">
-              <span class="data-security-rest-easy-knowing-that-your-farm-data-is-securely-stored-and-protected-we-prioritize-the-confidentiality-and-privacy-of-your-information-KCQ-sub-0">
-              Data Security: 
-              <br
-              
-              </span>
-              <span class="data-security-rest-easy-knowing-that-your-farm-data-is-securely-stored-and-protected-we-prioritize-the-confidentiality-and-privacy-of-your-information-KCQ-sub-1">Rest easy knowing that your farm data is securely stored and protected. We prioritize the confidentiality and privacy of your information.</span>
-            </div>
+          </button></a>
+          <div class="main4-1-wrapper">
+            <img
+              class="main4-1-icon"
+              loading="lazy"
+              alt=""
+              src="templates/assets/main4.png"
+            />
           </div>
         </div>
       </div>
-    </div>
-    <div id="tarfooter" class="footer-37-aGk">
-      <div class="auto-group-nm9n-JyS">
-        <img class="line-37-dF2" src="REPLACE_IMAGE:155:174"/>
-        <p class="by-techtriad-sharvesh-kamalesh-murugesh-9DN">
-        By TechTriad,
-        <br/>
-        
-        <br/>
-        <a style="color: black;" href="www.linkedin.com/in/rsharvesh16">Sharvesh</a>    
-        <a style="color: black;" href="www.linkedin.com/in/rsharvesh16">Kamalesh</a>     
-        <a style="color: black;" href="www.linkedin.com/in/murugesh-s">Murugesh</a>
-        </p>
-        <img class="line-38-33r" src="REPLACE_IMAGE:155:214"/>
-      </div>
-      <div class="auto-group-neeg-Xji">
-        <div class="logo-epL">
-          <img class="apple-touch-icon-ybi" src="./assets/apple-touch-icon.png"/>
-          <p class="predictit-Vpx">
-            <span class="predictit-Vpx-sub-0">Predict</span>
-            <span class="predictit-Vpx-sub-1">it</span>
-          </p>
-        </div>
-        <div class="all-rights-reserved-ViU">© 2024 All Rights Reserved</div>
-        <div class="social-BLQ">
-          <div class="auto-group-ul1j-6TN">
-            <p class="follow-us-T32">Follow Us</p>
-            <div class="auto-group-dhbs-9Re">
-            
-            <a href="www.facebook.com">
-              <img class="social-JJY" src="./assets/social.png"/>
-            </a>
-              <img class="social-qZN" src="./assets/social-7QY.png"/>
+      </section>
+      <footer id="foot" class="footer">
+        <div class="div-foot"></div>
+        <div class="footer-inner">
+          <div class="android-chrome-512x512-1-parent">
+            <img
+              class="android-chrome-512x512-1-icon"
+              loading="lazy"
+              alt=""
+              src="templates/assets/android-chrome-512x512.png"
+            />
+
+            <div class="predict-call-to-action">
+              <h3 class="predictit1">
+                <span>PredictIt</span>
+              </h3>
             </div>
           </div>
-          <img class="social-amr" src="./assets/social-aXv.png"/>
-          <img class="social-Xwz" src="./assets/social-JRr.png"/>
-          <img class="social-tXe" src="./assets/social-kRA.png"/>
         </div>
-      </div>
+        <div class="frame-parent1">
+          <div class="frame-parent2">
+            <div style="cursor: pointer;" id="home" class="home-wrapper">
+              <div class="home">Home</div>
+            </div>
+            <a href="{{url_for('predict')}}">
+            <div class="about">Predict</div>
+          </a>
+            <a href="{{url_for('detect')}}"> <div class="detect-wrapper">
+              <div class="detect1">Detect</div>
+            </div></a>
+            <div class="contact-us-wrapper">
+              <div class="contact-us">Contact Us</div>
+            </div>
+          </div>
+          <div class="frame-wrapper1">
+            <div class="fbececcaffebae-color-parent">
+              <div class="fbececcaffebae-color">
+                <img
+                  class="fbe55-c3ec-495c-aff1-e6b68a653-icon"
+                  loading="lazy"
+                  alt=""
+                  src="templates/assets/hari.jpeg"
+                />
+
+                <img
+                  class="ce2a131-3cac-481f-af77-d0eb250-icon"
+                  loading="lazy"
+                  alt=""
+                  src="templates/assets/kamalesh.jpeg"
+                />
+              </div>
+              <div class="cfaacca-logo">
+                <img
+                  class="c0-4f19-a8a5-7a0c96c20ca9-1-icon"
+                  loading="lazy"
+                  alt=""
+                  src="templates/assets/sharvesh.jpeg"
+                />
+
+                <img
+                  class="img-1-icon"
+                  loading="lazy"
+                  alt=""
+                  src="templates/assets/murugesh.jpg"
+                />
+              </div>
+              <img
+                class="f2533a64-e44c-42b2-bca9-31ccce-icon"
+                loading="lazy"
+                alt=""
+                src="templates/assets/darshna.jpeg"
+              />
+            </div>
+          </div>
+          <div class="c-e-predictit-copyright">
+            <div class="copyright-predictit">Copyright © Predictit</div>
+          </div>
+        </div>
+      </footer>
     </div>
-  </div>
-</div>
-<script>
+    <script>
     var scrollButton = document.getElementById('abtus');
-    var targetElement = document.getElementById('tarfooter');
+    var targetElement = document.getElementById('foot');
     scrollButton.addEventListener('click', function() {
       targetElement.scrollIntoView({
         behavior: 'smooth' 
       });
     });
 
-    var scrollButton2 = document.getElementById('feat');
-    var targetElement2 = document.getElementById('tarfeat');
+    var scrollButton2 = document.getElementById('home');
+    var targetElement2 = document.getElementById('head');
     scrollButton2.addEventListener('click', function() {
       targetElement2.scrollIntoView({
         behavior: 'smooth' 
       });
     });
-</script>
-</body>
+    </script>

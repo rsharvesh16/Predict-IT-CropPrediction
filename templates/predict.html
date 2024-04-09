@@ -1,262 +1,451 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C500%2C700%2C800%2C900"/>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Calibri%3A700"/>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A400%2C500%2C800%2C900"/>
-        <link rel="icon" href="favicon-16x16.png" >
-        <link rel="shortcut icon" href="favicon-16x16.png" >
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap"
+    />
+  </head>
   <style>
-            @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -o-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
-
-body {
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
-  font-weight: 100;
-  font-size: 12px;
-  line-height: 30px;
-  color: #777;
-  background: #4CAF50;
-}
-
-.container {
-  max-width: 400px;
-  width: 100%;
-  margin: 0 auto;
-
-}
-
-#contact input[type="text"],
-#contact input[type="email"],
-#contact input[type="tel"],
-#contact input[type="url"],
-#contact textarea,
-#contact button[type="submit"] {
-  font: 400 12px/16px "Poppins", Helvetica, Arial, sans-serif;
-}
-
-#contact {
-  background: #F9F9F9;
-  padding: 25px;
-  margin: 150px 0;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
-
-#contact h3 {
-  display: block;
-  font-size: 30px;
-  font-weight: 300;
-  margin-bottom: 10px;
-}
-
-#contact h4 {
-  margin: 5px 0 15px;
-  display: block;
-  font-size: 13px;
-  font-weight: 400;
-}
-
-fieldset {
-  border: medium none !important;
-  margin: 0 0 10px;
-  min-width: 100%;
-  padding: 0;
-  width: 100%;
-}
-
-#contact input[type="text"],
-#contact input[type="email"],
-#contact input[type="tel"],
-#contact input[type="url"],
-#contact textarea {
-  width: 100%;
-  border: 1px solid #ccc;
-  background: #FFF;
-  margin: 0 0 5px;
-  padding: 10px;
-}
-
-#contact input[type="text"]:hover,
-#contact input[type="email"]:hover,
-#contact input[type="tel"]:hover,
-#contact input[type="url"]:hover,
-#contact textarea:hover {
-  -webkit-transition: border-color 0.3s ease-in-out;
-  -moz-transition: border-color 0.3s ease-in-out;
-  transition: border-color 0.3s ease-in-out;
-  border: 1px solid #aaa;
-}
-
-#contact textarea {
-  height: 100px;
-  max-width: 100%;
-  resize: none;
-}
-
-#contact button[type="submit"] {
-  cursor: pointer;
-  width: 100%;
-  border: none;
-  background: #aaff55;
-  color: #FFF;
-  margin: 0 0 5px;
-  padding: 10px;
-  font-size: 15px;
-}
-
-#contact button[type="submit"]:hover {
-  background: #43A047;
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
-}
-
-#contact button[type="submit"]:active {
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-.copyright {
-  text-align: center;
-}
-
-#contact input:focus,
-#contact textarea:focus {
-  outline: 0;
-  border: 1px solid #aaa;
-}
-
-::-webkit-input-placeholder {
-  color: #888;
-}
-
-:-moz-placeholder {
-  color: #888;
-}
-
-::-moz-placeholder {
-  color: #888;
-}
-
-:-ms-input-placeholder {
-  color: #888;
-}
-.logo {
-  margin: 0.rem 50.1rem 0rem 0rem;
-  font-size: 3.2rem;
-  font-weight: 800;
-  line-height: 1.8;
-  color: #000000;
-  font-family: Poppins;
-  white-space: nowrap;
-  align-items: baseline;
-  flex-shrink: 0;
-  text-align: center;
-}
-.logo .predict {
-}
-.logo .it {
-  font-size: 3.2rem;
-  font-weight: 800;
-  line-height: 1.5;
-  color: #aaff55;
-  font-family: Poppins;
-}
-
-#mainContainer {
-            /* display: flex; */
-        }
-
-        #resultBox {
-            display: none;
-            flex-grow: 1;
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #ffffff;
-            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-        }
-
-        #resultBox h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        #resultBox p {
-            font-size: 46px;
-            color: #333;
-        }
-
-        #home{
-          color: #43A047;
-
-          }
-  </style>
-    </head>
-<body>
-
+    body {
+    margin: 0;
+    line-height: normal;
+  }
   
-  <center>
-  <div class="container" id="mainContainer">  
-    
-    <form id="contact" action="/predict" method="post">
+  :root {
+    /* fonts */
+    --font-poppins: Poppins;
+    --paragraph-regular-16: Roboto;
+    --font-calibri: Calibri;
+    --font-mulish: Mulish;
+  
+    /* font sizes */
+    --paragraph-regular-16-size: 16px;
+    --font-size-13xl: 32px;
+    --font-size-4xl: 23px;
+    --font-size-lg: 18px;
+    --font-size-21xl: 40px;
+    --font-size-5xl: 24px;
+    --font-size-xl: 20px;
+  
+    /* Colors */
+    --color-lightsteelblue: #adbce5;
+    --color-steelblue-100: #7a8ab3;
+    --color-steelblue-200: #436e8e;
+    --color-black: #000;
+    --color-white: #fff;
+    --color-lightslategray: #6994b5;
+    --color-gray-100: rgba(255, 255, 255, 0.18);
+    --color-gray-200: rgba(255, 255, 255, 0.16);
+  
+    /* Gaps */
+    --gap-base: 16px;
+    --gap-xl: 20px;
+    --gap-5xs: 8px;
+  
+    /* Paddings */
+    --padding-16xl: 35px;
+    --padding-xl: 20px;
+    --padding-sm: 14px;
+    --padding-8xs: 5px;
+    --padding-11xs: 2px;
+    --padding-5xs: 8px;
+    --padding-5xs-5: 7.5px;
+    --padding-21xl: 40px;
+    --padding-7xs: 6px;
+    --padding-451xl: 470px;
+    --padding-7xl: 26px;
+    --padding-216xl: 235px;
+    --padding-2xs-5: 10.5px;
+  
+    /* Border radiuses */
+    --br-31xl: 50px;
+    --br-6xl: 25px;
+    --br-3xs: 10px;
+    --br-8xs: 5px;
+    --br-xl: 20px;
+    --br-mini: 15px;
+  }
+.bg-1-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+  height: 1038px;
+  object-fit: cover;
+}
+.chat-container {
+  width: 782px;
+  height: 449px;
+  position: relative;
+  border-radius: var(--br-xl);
+  background-color: var(--color-gray);
+  display: none;
+  max-width: 100%;
+}
+.arrow-small-left-1-icon {
+  width: 33px;
+  height: 30px;
+  position: relative;
+  object-fit: cover;
+  z-index: 2;
+}
+.arrow-small-left-1-wrapper {
+  height: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 14px 0 0;
+  box-sizing: border-box;
+}
+.predict1 {
+  margin: 0;
+  height: 39.5px;
+  width: 170px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.frame-parent {
+  width: 430px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 100%;
+}
+.nitrogen,
+.phos {
+  border: 0;
+  outline: 0;
+  background-color: var(--color-white);
+  height: 50px;
+  flex: 3;
+  position: relative;
+  border-radius: var(--br-3xs);
+  min-width: 215px;
+  max-width: 100%;
+  z-index: 2;
+  margin-right: 10px; /* Adjust the margin as needed */
+}
 
-      <h3> 
+.nitrogen-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--gap-8xl);
+  max-width: 100%;
+}
+.pottasium,
+.temp {
+  border: 0;
+  outline: 0;
+  background-color: var(--color-white);
+  height: 50px;
+  flex: 1;
+  position: relative;
+  border-radius: var(--br-3xs);
+  min-width: 215px;
+  max-width: 100%;
+  z-index: 2;
+  margin-right: 10px;
+}
+.pottasium-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--gap-8xl);
+  max-width: 100%;
+}
+.humidity,
+.ph {
+  border: 0;
+  outline: 0;
+  background-color: var(--color-white);
+  height: 50px;
+  flex: 1;
+  position: relative;
+  border-radius: var(--br-3xs);
+  min-width: 215px;
+  max-width: 100%;
+  z-index: 2;
+  margin-right: 10px;
+}
+.humidity-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--gap-8xl);
+  max-width: 100%;
+}
+.predict2,
+.rain {
+  position: relative;
+   margin-right: 10px;
+}
+.rain {
+  border: 0;
+  outline: 0;
+  background-color: var(--color-white);
+  height: 50px;
+  flex: 1;
+  border-radius: var(--br-3xs);
+  min-width: 215px;
+  max-width: 100%;
+  z-index: 2;
+}
+.predict2 {
+  width: 92px;
+  font-size: 25px;
+  display: inline-block;
+  font-family: var(--font-poppins);
+  color: var(--color-white);
+  text-align: center;
+  min-width: 92px;
+}
+.predict-wrapper,
+.rain-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 100%;
+}
+.predict-wrapper {
+  cursor: pointer;
+  border: 0;
+  padding: 4.5px var(--padding-xl);
+  background-color: #adbce5;
+  flex: 0.8792;
+  border-radius: var(--br-3xs);
+  box-sizing: border-box;
+  min-width: 215px;
+  z-index: 2;
+}
+.predict-wrapper:hover {
+  background-color: #7a8ab3;
+}
+.rain-parent {
+  align-self: stretch;
+  gap: var(--gap-8xl);
+}
+.ask-your-doubts {
+  font-weight: 300;
+}
+.ask-your-doubts,
+.here {
+  font-family: var(--font-poppins);
+}
+.ask-your-doubts-container {
+  width: 218px;
+  position: relative;
+  font-size: var(--font-size-xl);
+  line-height: 25px;
+  color: var(--color-white);
+  text-align: center;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.ask-your-doubts-here-wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 var(--padding-xl) 0 21px;
+}
+.chatbox,
+.frame-group,
+.rain-indicator {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.rain-indicator {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--gap-8xl);
+  max-width: 100%;
+}
+.chatbox,
+.frame-group {
+  align-items: flex-start;
+}
+.frame-group {
+  margin: 0;
+  align-self: stretch;
+  gap: 28px;
+  
+}
+.chatbox {
+  position: absolute;
+  top: 190px;
+  left: 329px;
+  border-radius: var(--br-xl);
+  background-color: var(--color-gray-100);
+  width: 782px;
+  padding: 0 46px 30px;
+  box-sizing: border-box;
+  gap: 47px;
+  z-index: 1;
+}
+.predict {
+  width: 100%;
+  height: 1024px;
+  position: relative;
+  border-radius: 5px;
+  background-color: var(--color-white);
+  overflow: hidden;
+  letter-spacing: normal;
+  text-align: center;
+  font-size: 40px;
+  color: var(--color-white);
+  font-family: var(--font-poppins);
+}
+@media screen and (max-width: 750px) {
+  .predict1 {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 675px) {
+  .predict-wrapper,
+  .rain {
+    flex: 1;
+  }
+  .rain-parent {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 450px) {
+  .predict1 {
+    font-size: 24px;
+  }
+  .frame-parent {
+    flex-wrap: wrap;
+  }
+  .predict2 {
+    font-size: var(--font-size-xl);
+  }
+  .ask-your-doubts-container {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .predict {
+    height: auto;
+    min-height: 1024;
+  }
+}
+input::placeholder{
+    font-family: var(--font-poppins);
+    text-indent: 8px;
+    padding-left: 10px;
+}
+input{
+    font-family: var(--font-poppins);
+    text-align: left;
+}
+a{
+    color: white;
+}
+p{
+  color: #fff;
+  font-size: large;
+}
 
-      <p class="logo">
-        <a href="{{ url_for('home') }}">
-          <svg xmlns="http://www.w3.org/2000/svg" id="home" width="40" height="40" fill="currentColor" class="bi bi-house-door-fill" viewBox="0 0 16 16">
-            <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5"/>
-          </svg>
-        </a>
-        <span class="predict">Predict</span>
-        <span class="it">it</span>
-      </p>
-    </h3>
-    <fieldset>
-      <input name="Nitrogen_value" placeholder="Nitrogen (N)" type="text" tabindex="1" required autofocus>
-    </fieldset>
-    <fieldset>
-      <input name="Phosphorus_value" placeholder="Phosphorus (P)" type="text" tabindex="2" required>
-    </fieldset>
-    <fieldset>
-      <input name="Potassium_value" placeholder="Pottasium (K)" type="text" tabindex="3" required>
-    </fieldset>
-    <fieldset>
-      <input name="Temperature_value" placeholder="Temperature" type="text" tabindex="4" required>
-    </fieldset>
-    <fieldset>
-      <input name="Humidity_value" placeholder="Humidity" type="text" tabindex="5" required>
-    </fieldset>
-    <fieldset>
-      <input name="Ph_value" placeholder="Soil pH" type="text" tabindex="6" required>
-    </fieldset>
-    <fieldset>
-      <input name="Rainfall_value" placeholder="Rainfall" type="text" tabindex="7" required>
-    </fieldset>
-    <fieldset>
-      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Predict</button>
-    </fieldset>
+.an{
+  text-transform: uppercase;
+  font-size: larger;
+}
 
-    <center>
-      <a style="font-size: medium; color: #00a108;" href="{{ url_for('chat') }}">Any doubts? ask AI</a>
-      </center>
+input{
+  padding: 0 15px;
 
-      {% if prediction %}
-          <b><h2><p style="color: #000000; font-weight: 400; font-size: larger;">Here is the prediction result <b>{{ prediction }}</b></p></h2></b>
-      {% endif %}
-    </center>
-    </form>
+}
+  </style>
+  <body>
+    <div class="predict">
+      <img class="bg-1-icon" alt="" src="templates/assets/bg.jpg" />
 
-  </div>
+      <div class="chatbox">
+        <div class="chat-container"></div>
+        <div class="frame-parent">
+          <div class="arrow-small-left-1-wrapper">
+            <a href="{{ url_for('home') }}"><img
+              class="arrow-small-left-1-icon"
+              loading="lazy"
+              alt=""
+              src="templates/assets/arrow-small-left.png"
+            /></a>
+          </div>
+          <h1 class="predict1">Predict</h1>
+        </div>
+        <form class="frame-group" action="{{ url_for('predict') }}" method="POST">
+          <div class="nitrogen-parent">
+            <input class="nitrogen" name="Nitrogen_value" placeholder="Nitrogen (N) [5 - 120]" type="number" tabindex="1" min="5" max="120" step="0.01" />
 
-</body>
+            <input class="phos" name="Phosphorus_value" placeholder="Phosphorus (P) [15 - 140]" type="number" min="15" max="140" tabindex="2" />
+          </div>
+          <div class="pottasium-parent">
+            <input class="pottasium" name="Potassium_value"placeholder="Pottasium (K) [5 - 112]" type="number" min="5" max="112" tabindex="3" type="text" />
+
+            <input class="temp" name="Temperature_value" placeholder="Temperature [18 - 43]" type="number" min="18" max="43" step="0.01" tabindex="4" type="text" />
+          </div>
+          <div class="humidity-parent">
+            <input class="humidity" name="Humidity_value" placeholder="Humidity [11 - 100]" type="number" min="11" max="100" step="0.01" tabindex="5" type="text" />
+
+            <input class="ph" name="Ph_value" placeholder="Soil pH [4.5 - 8]" type="number" min="4.5" max="8" step="0.01" tabindex="6" type="text" />
+          </div>
+          <div class="rain-indicator">
+            <div class="rain-parent">
+              <input class="rain" name="Rainfall_value" placeholder="Rainfall (in mm) [30 - 300]" type="number" min="30" max="300" step="0.01" tabindex="7" type="text" />
+
+              <button type="submit" class="predict-wrapper">
+                <b class="predict2">Predict</b>
+              </button>
+            </div>
+
+            <div class="ask-your-doubts-here-wrapper">
+
+              <div class="ask-your-doubts-container">
+                {% if prediction %}
+                <center>
+                <p ><b>You can plant : <p class="an">{{ prediction }}</p></b></p>
+              </center>
+              {% endif %}
+                <span class="ask-your-doubts">Ask your doubts </span>
+                <a href="{{ url_for('chat') }}"><b class="here">here</b></a><br>
+
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>

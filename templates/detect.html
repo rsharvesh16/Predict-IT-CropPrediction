@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./detector.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Calibri:wght@700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400&display=swap"
+    />
+  </head>
+  <style>
+    body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --font-poppins: Poppins;
+    --paragraph-regular-16: Roboto;
+    --font-calibri: Calibri;
+    --font-mulish: Mulish;
+  
+    /* font sizes */
+    --paragraph-regular-16-size: 16px;
+    --font-size-13xl: 32px;
+    --font-size-4xl: 23px;
+    --font-size-lg: 18px;
+    --font-size-21xl: 40px;
+    --font-size-5xl: 24px;
+    --font-size-xl: 20px;
+  
+    /* Colors */
+    --color-lightsteelblue: #adbce5;
+    --color-steelblue-100: #7a8ab3;
+    --color-steelblue-200: #436e8e;
+    --color-black: #000;
+    --color-white: #fff;
+    --color-lightslategray: #6994b5;
+    --color-gray-100: rgba(255, 255, 255, 0.18);
+    --color-gray-200: rgba(255, 255, 255, 0.16);
+  
+    /* Gaps */
+    --gap-base: 16px;
+    --gap-xl: 20px;
+    --gap-5xs: 8px;
+  
+    /* Paddings */
+    --padding-16xl: 35px;
+    --padding-xl: 20px;
+    --padding-sm: 14px;
+    --padding-8xs: 5px;
+    --padding-11xs: 2px;
+    --padding-5xs: 8px;
+    --padding-5xs-5: 7.5px;
+    --padding-21xl: 40px;
+    --padding-7xs: 6px;
+    --padding-451xl: 470px;
+    --padding-7xl: 26px;
+    --padding-216xl: 235px;
+    --padding-2xs-5: 10.5px;
+  
+    /* Border radiuses */
+    --br-31xl: 50px;
+    --br-6xl: 25px;
+    --br-3xs: 10px;
+    --br-8xs: 5px;
+    --br-xl: 20px;
+    --br-mini: 15px;
+  }
+    .chat-container1 {
+  width: 500px;
+  height: 384px;
+  position: relative;
+  border-radius: var(--br-xl);
+  background-color: var(--color-gray-100);
+  display: none;
+  max-width: 100%;
+}
+.disease-detector {
+  margin: 0;
+  height: 39.2px;
+  flex: 1;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  max-width: 100%;
+  z-index: 1;
+}
+.disease-detector-wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-21xl) 0 39px;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.div1 {
+  width: 448px;
+  height: 275px;
+  position: relative;
+  border-radius: var(--br-mini);
+  background-color: var(--color-white);
+  display: none;
+  max-width: 100%;
+}
+.upload-icon {
+  height: 59.6px;
+  width: 68.8px;
+  position: relative;
+  z-index: 2;
+}
+.upload-icon-wrapper {
+  width: 238px;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 0 0 1px;
+  box-sizing: border-box;
+}
+.upload {
+  position: relative;
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  font-family: var(--paragraph-regular-16);
+  color: var(--color-white);
+  text-align: left;
+  display: inline-block;
+  min-width: 63px;
+}
+.upload2{
+    position: relative;
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  font-family: var(--paragraph-regular-16);
+  color: var(--color-white);
+  text-align: center;
+  display: inline-block;
+  min-width: 84px;
+}
+.cloud-upload-1-icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  object-fit: cover;
+}
+.but5,
+.cloudupload {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.cloudupload {
+  height: 21.5px;
+  flex-direction: column;
+  padding: 1.5px 0 0;
+  box-sizing: border-box;
+}
+.but5 {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-2xs-5) 76px;
+  background-color: var(--color-lightsteelblue);
+  border-radius: var(--br-8xs);
+  flex-direction: row;
+  gap: 3px;
+  z-index: 2;
+}
+.txt3 {
+  flex: 1;
+  position: relative;
+  line-height: 14px;
+  z-index: 2;
+}
+.but-group,
+.chatbox1,
+.f-r-a-m-e,
+.txt {
+  display: flex;
+  justify-content: flex-start;
+}
+.txt {
+  align-self: stretch;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0 51px 0 50px;
+}
+.but-group,
+.chatbox1,
+.f-r-a-m-e {
+  flex-direction: column;
+}
+.but-group {
+  width: 238px;
+  align-items: flex-start;
+}
+.chatbox1,
+.f-r-a-m-e {
+  align-self: stretch;
+  box-sizing: border-box;
+  max-width: 100%;
+  z-index: 1;
+}
+.f-r-a-m-e {
+  height: 275px;
+  border-radius: var(--br-mini);
+  background-color: var(--color-white);
+  align-items: center;
+  padding: 71px var(--padding-xl);
+  gap: 15.4px;
+  text-align: left;
+  font-size: 8px;
+  color: #676767;
+  font-family: var(--font-mulish);
+}
+.chatbox1 {
+  border-radius: var(--br-xl);
+  background-color: var(--color-gray-100);
+  align-items: flex-start;
+  padding: var(--padding-2xs-5) var(--padding-7xl) var(--padding-16xl);
+  gap: 24.3px;
+}
+.arrow-small-left-2-icon,
+.bg-1-icon1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1440px;
+  height: 1038px;
+  object-fit: cover;
+}
+.arrow-small-left-2-icon {
+  top: 232px;
+  left: 496px;
+  width: 33px;
+  height: 30px;
+  z-index: 3;
+}
+.bg-1-parent {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.detector {
+  width: 100%;
+  position: relative;
+  border-radius: var(--br-8xs);
+  background-color: var(--color-white);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 205px var(--padding-451xl) 435px;
+  box-sizing: border-box;
+  letter-spacing: normal;
+  text-align: center;
+  font-size: var(--font-size-21xl);
+  color: var(--color-white);
+  font-family: var(--font-poppins);
+}
+@media screen and (max-width: 750px) {
+  .disease-detector {
+    font-size: var(--font-size-13xl);
+  }
+  .detector {
+    padding-left: var(--padding-216xl);
+    padding-right: var(--padding-216xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .disease-detector {
+    font-size: var(--font-size-5xl);
+  }
+  .upload {
+    font-size: var(--paragraph-regular-16-size);
+  }
+  .chatbox1,
+  .detector {
+    box-sizing: border-box;
+  }
+  .chatbox1 {
+    padding-top: var(--padding-xl);
+    padding-bottom: 15px;
+  }
+  .detector {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+  }
+}
+
+.but {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-8xs) 28.5px;
+  background-color: var(--color-lightsteelblue);
+  border-radius: var(--br-3xs);
+  padding: 10px 80px;
+  color: #fff;
+  font-weight: bold;
+  font-size: large;
+  margin-top: 10px;
+}
+.but:hover {
+  background-color: var(--color-steelblue-100);
+}
+
+input{
+  padding: 5px 5px;
+  width: 88%;
+  border: 1px solid var(--color-steelblue-200);
+  border-radius: 5px;
+  font-size: small;
+  font-family: var(--font-poppins);
+}
+  </style>
+  <body>
+    <div class="detector">
+      <div class="chatbox1">
+        <div class="chat-container1"></div>
+        <div class="disease-detector-wrapper">
+          <h1 class="disease-detector">Disease Detector</h1>
+        </div>
+        <div id="div-cont" class="f-r-a-m-e">
+          <div class="div1"></div>
+          <div class="upload-icon-wrapper">
+            <img
+              class="upload-icon"
+              loading="lazy"
+              alt=""
+              src="templates/assets/upload (1).png"
+            />
+          </div>
+          <div class="but-group">
+            <!-- <input type="file"  name="file" id="imageInput" style="display: none;" accept="image/*"> -->
+            <!-- <input type="file" name="file" class="form-control-file" id="inputImage" onchange=previewImage(event)
+              required> -->
+            <!-- <button onclick="selectImage()" type="submit" class="but5">
+              <div id="cont" class="upload">Upload</div>
+              <div class="cloudupload">
+                <img
+                  class="cloud-upload-1-icon"
+                  alt=""
+                  src="templates/assets/cloud-upload.png"
+                />
+              </div>
+            </button></input> -->
+            <div class="txt">
+                <div class="txt3">Supported formats : JPEG, PNG.</div>
+              </div>
+              <br>
+              <br>
+              <form action="{{ url_for('result') }}" method="POST" enctype="multipart/form-data">
+                <div class="form-group text-center">
+                  
+                  <input type="file" name="img" class="form-control-file" required>
+                  <br />
+                  <button class="but" type="submit">Predict</button>
+                </div>
+              </form>
+          </div>
+        </div>
+      </div>
+      <main class="bg-1-parent">
+        <img class="bg-1-icon1" alt="" src="templates/assets/bg.jpg" />
+
+        <a href="{{url_for('home')}}"><img
+          class="arrow-small-left-2-icon"
+          loading="lazy"
+          alt=""
+          src="templates/assets/arrow-small-left.png"
+        /></a>
+      </main>
+    </div>
+  </body>
+  <script>
+    function back(){
+        window.location.href='index.html';
+    }
+
+    function selectImage() {
+        document.getElementById('imageInput').click();
+    }
+
+document.getElementById('imageInput').addEventListener('change', function() {
+    var selectedImage = this.files[0];
+    displayImage(selectedImage);
+});
+
+document.getElementById('imageInput').addEventListener('change', function() {
+    var selectedImage = this.files[0];
+    displayResizedImage(selectedImage);
+});
+
+function displayResizedImage(imageFile) {
+    var reader = new FileReader();
+    
+    reader.onload = function(event) {
+        var imageData = event.target.result;
+        alert("Image uploaded Successfully !!! " );
+    };
+    
+    reader.readAsDataURL(imageFile);
+}
+
+  </script>
+</html>

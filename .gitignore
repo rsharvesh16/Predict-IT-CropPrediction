@@ -1,2 +1,5 @@
 venv/
 .env
+__pycache__/
+PredictIt-Disease-Detection/
+new-plant-diseases-dataset/
